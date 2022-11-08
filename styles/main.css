@@ -495,13 +495,14 @@ html {
 
 .footer {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     padding-bottom: 8px; 
  } 
     
  .footer-img {
     position: relative;
+    width: 100%;
     mix-blend-mode: difference;
     border-radius: 0px 8px 8px 0px;
  }
