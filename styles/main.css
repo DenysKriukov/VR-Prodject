@@ -507,6 +507,7 @@ html {
     justify-content: center;
     align-items: center;
     padding-bottom: 8px; 
+    box-sizing: border-box;
  } 
     
  .footer-img {
@@ -516,7 +517,8 @@ html {
     border-radius: 0px 8px 8px 0px;
  }
 
-.footer-wrapper {
+.footer-wrapper {  
+    max-width: 588px;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -544,6 +546,11 @@ html {
 
 .footer-form {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 12px; 
     column-gap: 12px;
     padding: 4px 8px;  
 }
