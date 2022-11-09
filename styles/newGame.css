@@ -1,16 +1,16 @@
 
-.authorization {
+.newGame {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 16px;
     gap: 14px;
-
+    
     position: relative;
     width: 592px;
-    height: 304px;
-
+    height: 462px;
+    
     background: #0E0E0E;
     border-radius: 6px;
 }
