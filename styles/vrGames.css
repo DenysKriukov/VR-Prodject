@@ -264,6 +264,15 @@ html {
     border-radius: 4px;
 }
 
+.pagination button:hover {
+    background: #d2d2d2;
+}
+.pagination .btn--active:hover {
+    background: #ffffff;
+}
+.pagination .btn--disabled:hover {
+    background: #ffffff;
+}
 /* ----------------- footer  ---- */
 
 .footer {
@@ -281,7 +290,6 @@ html {
     /* border-radius: 0px 8px 8px 0px;
     padding: 67px 10px 62px 10px;
     margin-bottom: 8px; */
-    
  } 
     
  .footer-img {
@@ -301,7 +309,6 @@ html {
     padding: 0px;
     gap: 16px;
 }
-
 
 .footer-header-text {
     font-family: 'Poppins';
