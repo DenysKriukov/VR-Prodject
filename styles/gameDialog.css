@@ -1,0 +1,94 @@
+.game-dialog {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    gap: 16px;
+
+    position: relative;
+    width: 720px;
+    height: 722px;
+box-sizing: border-box;
+    background: #0E0E0E;
+    border-radius: 6px;
+}
+.game-dialog-img {
+    width: 100%px;
+    
+    width: 688px;
+    height: 534px;
+
+    background: url(image.png);
+    border: 0.540719px solid rgba(228, 229, 231, 0.23);
+    border-radius: 8px;
+}
+.game-dialog-name {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 32px;
+    /* identical to box height */
+    
+    /* text-align: center; */
+    text-decoration-line: underline;
+    
+    color: #FFFFFF;    
+}
+.game-dialog-description {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+    
+    text-decoration-line: underline;
+    
+    color: #FFFFFF;    
+}
+.user-wrap-dialog {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+
+    width: 184px;
+    height: 52px;
+}
+.user-dialog-img {
+    width: 48px;
+    height: 48px;
+}
+.uswer-wrap-dialog-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 4px;
+}
+.user-dialog-name {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+    
+    text-decoration-line: underline;
+    
+    color: #FFFFFF;    
+}
+.user-dialog-description {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+    
+    text-decoration-line: underline;
+    
+    color: #FFFFFF;   
+}
