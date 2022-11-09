@@ -81,6 +81,26 @@ html {
     color: rgb(177, 43, 226);
 }
 
+.nav-link-home::after,
+.nav-link-games::after,
+.nav-link-users::after {
+    transition: 0.5s all;
+    content: '';
+    display: block;
+    margin: 0 auto;
+    margin-top: 2px;
+    border-radius: 6px;
+    height: 3px;
+    width: 0;
+    background-color: #fff;
+}
+
+.nav-link-home:hover::after,
+.nav-link-games:hover::after,
+.nav-link-users:hover::after  {
+    width: 50%;
+}
+
 .nav-link-home,
 .nav-link-users {
     text-decoration: none;
