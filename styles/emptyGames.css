@@ -1,0 +1,52 @@
+
+.empty-games-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+    height: 65vh;
+}
+.empty-games-header {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 72px;
+    line-height: 64px;
+    /* identical to box height, or 89% */
+    
+    text-align: center;
+    
+    color: #FFFFFF;    
+}
+
+.empty-games-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.empty-games-description-singIn {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 64px;
+    /* identical to box height, or 200% */
+    
+    text-align: center;
+    text-decoration-line: underline;
+    color: #BC3CD8;
+}
+
+.empty-games-description-text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 64px;
+    /* identical to box height, or 200% */
+    text-align: center;
+}
