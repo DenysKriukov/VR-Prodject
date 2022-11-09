@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR Games</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/usersPage.css">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+    
+</head>
+
+<!-- ---------------------------------header-------- -->
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <a href="./index.html"><img  src="../assets/img/headerLogoLight.png" class="header-logo" alt="Logo"></a>
+                <div class="nav">
+                    <nav>
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="./index.html" class="nav-link-home">Home</a></li>
+                            <li class="nav-item">
+                                <a href="./vrGamesPage.html" class="nav-link-games">Games</a></li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link-users">Users</a></li>
+                        </ul>
+                    </nav>
+                    <button class="nav-btnSign-in btn" type="submit">Sign in</button>
+                </div>
+            </div>                          
+        </div>
+    </header>
+
+    <!-- ----------------------------users header ----------->
+    <section>
+        <div class="container">
+            <div class="users-wrapper">
+                <div class="users-header">
+                        <h3 class="users-header-text">VR Users</h3>
+                    <div class="users-header-controll">
+                        <select class="btnSelect">
+                            <option >Sort By Role</option>
+                        </select>
+                    </div>
+                </div>
+    
+                <!----------------------- users section -->
+
+                <ul class="users-section">
+                    <li>
+                        <p>Avatar</p>
+                        <img class="users-img" src="../assets/img/heroPeople3avatar.png" alt="user">                               <img class="users-img" src="../assets/img/heroPeople3avatar.png" alt="user">                               <img class="users-img" src="../assets/img/heroPeople3avatar.png" alt="user">                               <img class="users-img" src="../assets/img/heroPeople3avatar.png" alt="user">                               <img class="users-img" src="../assets/img/heroPeople3avatar.png" alt="user">                           </li>
+                    <li>
+                        <p>Home</p>
+                        <div class="users-wrap-name"><p>Andrzey Dumbra</p></div>
+                        <div class="users-wrap-name"><p>Viktor Dumbra</p></div>
+                        <div class="users-wrap-name"><p>Oleg Dumbra</p></div>
+                        <div class="users-wrap-name"><p>Oleg Dumbra</p></div>
+                        <div class="users-wrap-name"><p>Oleg Dumbra</p></div>            
+                    </li>
+                    <li>
+                        <p>Country</p>
+                        <div class="users-wrap"><p>Poland</p></div>
+                        <div class="users-wrap"><p>Ukraine</p></div>
+                        <div class="users-wrap"><p>Poland</p></div>
+                        <div class="users-wrap"><p>Poland</p></div>
+                        <div class="users-wrap"><p>Poland</p></div>             
+                    </li>
+                    <li>
+                        <p>Age</p>
+                        <div class="users-wrap"><p>17</p></div>
+                        <div class="users-wrap"><p>22</p></div>
+                        <div class="users-wrap"><p>19</p></div>
+                        <div class="users-wrap"><p>17</p></div>
+                        <div class="users-wrap"><p>27</p></div>             
+                    </li>
+                    <li>
+                        <p>Email</p>
+                        <div class="users-wrap"><p>Email_example@gmail.com</p> </div>
+                        <div class="users-wrap"><p>Email_example@gmail.com</p></div>
+                        <div class="users-wrap"><p>Email_example@gmail.com</p></div>
+                        <div class="users-wrap"><p>Email_example@gmail.com</p></div>
+                        <div class="users-wrap"><p>Email_example@gmail.com</p></div>           
+                    </li>
+                    <li>
+                        <p>Actions</p>  
+                        <div class="users-actions">
+                            <div class="users-dots"></div>
+                            <div class="users-dots"></div>
+                            <div class="users-dots"></div>
+                        </div>  
+                        <div class="users-actions">
+                            <div class="users-dots"></div>
+                            <div class="users-dots"></div>
+                            <div class="users-dots"></div>
+                        </div>  
+                        <div class="users-actions">
+                            <div class="users-dots"></div>
+                            <div class="users-dots"></div>
+                            <div class="users-dots"></div>
+                        </div>  
+                        <div class="users-actions">
+                            <div class="users-dots"></div>
+                            <div class="users-dots"></div>
+                            <div class="users-dots"></div>
+                        </div>  
+                        <div class="users-actions">
+                            <div class="users-dots"></div>
+                            <div class="users-dots"></div>
+                            <div class="users-dots"></div>
+                        </div>             
+                    </li>
+                </ul>
+             </div>
+        </div>
+        
+    </section>
+
+    <!-- --------------------------pagination---- -->
+
+    <section>
+        <div class="container">
+            <div class="pagination">
+                <button type="button" class="pagination-btn btn--disabled" disabled><</button>
+                <button type="button" class="pagination-btn btn--active">1</button>
+                <button type="button" class="pagination-btn">2</button>
+                <button type="button" class="pagination-btn">...</button>
+                <button type="button" class="pagination-btn">9</button>
+                <button type="button" class="pagination-btn">10</button>
+                <button type="button" class="pagination-btn">></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- --------------------------footer------------ -->
+
+    <footer>
+        <div class="container">
+            <div class="footer" data-aos="flip-down">
+                <img class="footer-img" src="../assets/img/footerPointingHands.png" alt="pointing hands">
+                <div class="footer-wrapper">
+                    <div class="footer-header">
+                        <h4 class="footer-header-text">Explore product in new way</h4>
+                        <p class="footer-header-description">We specialize in creating visual identities for products and branda in your company.</p>
+                    </div>
+                    <form class="footer-form" >
+                        <input class="footer-input" type="email" placeholder="Your Email">
+                        <button class="experience-btnStart btn">start</button>
+                    </form>
+                </div>
+            </div>
+        </div>    
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../js/game.js"></script>
+</body>
+
+</html>

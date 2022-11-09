@@ -282,6 +282,7 @@ html {
 .btn--active {
     border: 1px solid #BC3CD8;
     border-radius: 4px;
+    color: #BC3CD8;
 }
 
 .pagination button:hover {
