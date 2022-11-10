@@ -208,6 +208,7 @@ html {
     align-items: center;
     padding: 0px;
     gap: 28px;
+
     align-self: stretch;
     /* height: 380px; */
 }

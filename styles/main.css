@@ -49,7 +49,7 @@ html {
 /* -------------------------- header ------------------------------ */
 
 .header {
-    padding-top: 8px;
+    padding-top: 16px;
     margin-bottom: 32px;
 }
 
@@ -509,8 +509,7 @@ html {
 }
     
 .benefits-icons {
-    max-width: 29px;
-    max-height: 26px;
+   
 }
 
 .benefits-text {
@@ -526,35 +525,42 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 8px; 
-    box-sizing: border-box;
+    margin-bottom: 8px; 
+    background-image: url("../assets/img/footerPointingHands.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* padding: 67px 363px 63px 330px; */
+    border-radius: 8px;
  } 
-    
- .footer-img {
-    position: relative;
-    width: 100%;
-    mix-blend-mode: difference;
-    border-radius: 0px 8px 8px 0px;
- }
 
-.footer-wrapper {  
+.footer-wrapper { 
+    margin: 60px;
     max-width: 588px;
-    position: absolute;
+    /* position: absolute; */
     display: flex;
     flex-direction: column;
+    /* justify-content: space-between; */
     align-items: center;
     text-align: center;
-    padding: 0px;
+    /* padding: 0px auto; */
     gap: 16px;
 }
 
+/* .footer-header {
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    flex-direction: column;
+} */
 
 .footer-header-text {
     font-family: 'Poppins';
     font-weight: 700;
     font-size: 26px;
     line-height: 39px; 
-    margin-bottom: 16px;
+    
 }
 
 .footer-header-description {
