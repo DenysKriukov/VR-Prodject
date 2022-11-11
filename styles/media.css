@@ -1,8 +1,4 @@
-@media (max-width: 860px) {
-    .footer-wrapper { 
-        margin: 50px;
-
-}
+/* 
 @media (max-width: 760px) {
     .hero {
         flex-direction: column-reverse;
@@ -17,9 +13,10 @@
     .hero-description {
         text-align: center;
     }
-    .footer-wrapper { 
-        margin: 40px;
+    .footer {
+        padding: 40px 15px;
     }
+    
 }
 
 @media (max-width: 720px) {
@@ -31,9 +28,7 @@
         align-items: center;
         max-width: 550px;
     }
-    .footer-wrapper { 
-        margin: 30px;
-    }
+   
 }
 
 @media (max-width: 600px) {
@@ -50,18 +45,19 @@
     .company-values-info {
         text-align: center;
     }
-    .footer-wrapper {
-        margin: 20px;
-        gap: 10px;
-    }
-    .footer-header-text {
-        font-size: 18px;
-        line-height: 27px;
-    }
-    .footer-header-description {
-        max-width: 300px;
-        font-size: 10px;
-        line-height: 11px;
-    }
-    
+    .footer {
+        padding: 20px 15px;
+    }   
 }
+
+@media (max-width: 500px) {
+    .footer {
+        padding: 10px 15px;
+    }   
+    .footer-header-description {
+        margin-top: 10px;
+    }
+    .footer-form {
+        margin-top: 10px;
+    }
+} */

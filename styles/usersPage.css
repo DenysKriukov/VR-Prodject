@@ -299,7 +299,7 @@ html {
     justify-content: center;
     align-items: center;
     padding-bottom: 8px; 
-    box-sizing: border-box;
+    
     /* width: 100%;
     background-image: url(../assets/img/footerPointingHands.png);
     background-size: cover;
@@ -313,10 +313,11 @@ html {
 
     
  .footer-img {
-    position: relative;
     width: 100%;
     mix-blend-mode: difference;
     border-radius: 0px 8px 8px 0px;
+    padding: 20px;
+    /* box-sizing: border-box; */
  }
 
 .footer-wrapper {

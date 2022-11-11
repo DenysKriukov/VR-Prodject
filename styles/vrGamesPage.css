@@ -297,50 +297,31 @@ html {
 /* ----------------- footer  ---- */
 
 .footer {
+    
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-bottom: 8px; 
-    box-sizing: border-box;
-    /* width: 100%;
+    /* box-sizing: border-box; */
+    /* width: 100%; */
     background-image: url(../assets/img/footerPointingHands.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center; */
+    background-position: center;
     /* mix-blend-mode: difference; */
-    /* border-radius: 0px 8px 8px 0px;
-    padding: 67px 10px 62px 10px;
-    margin-bottom: 8px; */
- } 
-    
- .footer-img {
-    position: relative;
-    width: 100%;
-    mix-blend-mode: difference;
+    padding: 67px 10px 62px ;
     border-radius: 0px 8px 8px 0px;
- }
-
-.footer-wrapper {
-    max-width: 588px;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0px;
+    box-sizing: border-box;
     gap: 16px;
-}
+ } 
 
 .footer-header-text {
     font-family: 'Poppins';
     font-weight: 700;
     font-size: 26px;
     line-height: 39px;
-    margin-bottom: 16px;
-    /* identical to box height */
-    
-    /* display: flex;
-    align-items: center; */
+    text-align: center;
 }
 
 .footer-header-description {
@@ -348,8 +329,6 @@ html {
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
-    /* identical to box height */
-    
     text-align: center;
 }
 
