@@ -27,8 +27,8 @@
         <div class="container">
             <div class="header-wrapper">
                 <a href="./index.html"><img  src="../assets/img/headerLogoLight.png" class="header-logo" alt="Logo"></a>
-                <div class="nav">
-                    <nav>
+                <div class="nav-wrap open">
+                    <nav class="nav">
                         <ul class="nav-list">
                             <li class="nav-item">
                                 <a href="#" class="nav-link-home">Home</a></li>
@@ -37,9 +37,12 @@
                             <li class="nav-item">
                                 <a href="./usersPage.html" class="nav-link-users">Users</a></li>
                         </ul>
+                        <button class="nav-btnSign-in btn" type="submit">Sign in</button>
                     </nav>
-                    <button class="nav-btnSign-in btn" type="submit">Sign in</button>
-                </div>
+                     <button class="nav-button-burger">
+                        <img width="35px" height="25px" src="../assets/icons/iconBurgerMenu.svg" alt="btn burger">
+                     </button>
+                </div> 
             </div>                          
         </div>
     </header>
@@ -108,7 +111,7 @@
         <div class="container" data-aos="fade-up">
             <div class="awesome">
                 <h3 class="awesome-text">Awesome experiences with virtual reality world</h3>
-                <img width="175px" height="70px" class="awesome-img" src="../assets/img/vrGlasses.png" alt="vr-glasses" />
+                <img  class="awesome-img" src="../assets/img/vrGlasses.png" alt="vr-glasses" />
             </div>
         </div>
     </section>
@@ -201,9 +204,9 @@
 
     <footer>
         <div class="container">
-            <div class="footer" >
+            <div class="footer" data-aos="flip-down">
                 <h4 class="footer-header-text">Explore product in new way</h4>
-                <p class="footer-header-description">We specialize in creating visual identities for products and branda in your company.</p>
+                <p class="footer-header-description">We specialize in creating visual identities for products and branda in your company.</p>    
                 <form class="footer-form" >
                     <input class="footer-input" type="email" placeholder="Your Email">
                     <button class="experience-btnStart btn">start</button>

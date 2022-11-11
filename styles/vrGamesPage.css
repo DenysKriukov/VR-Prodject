@@ -135,13 +135,17 @@ html {
     line-height: 24px;
 }
 
+.nav-button-burger {
+    display: none;
+}
+
+
 /* -- -------------  games header -----------> */
 
 .games-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     padding: 0px;
     gap: 161px;
     margin-bottom: 32px;
@@ -210,7 +214,7 @@ html {
     height: 200px;
 }
 
-/* .games-section-cards:hover {
+/* .game-card:hover {
     transform: translate(-15px);
 } */
 .card-wrap-text {
@@ -297,31 +301,24 @@ html {
 /* ----------------- footer  ---- */
 
 .footer {
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 8px; 
-    /* box-sizing: border-box; */
-    /* width: 100%; */
-    background-image: url(../assets/img/footerPointingHands.png);
+    width: 100%;
+    margin-bottom: 8px; 
+    background-image: url("../assets/img/footerPointingHands.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    /* mix-blend-mode: difference; */
-    padding: 67px 10px 62px ;
-    border-radius: 0px 8px 8px 0px;
+    padding: 60px 15px;
+    border-radius: 8px;
     box-sizing: border-box;
-    gap: 16px;
  } 
 
 .footer-header-text {
+    text-align: center;
     font-family: 'Poppins';
     font-weight: 700;
     font-size: 26px;
-    line-height: 39px;
-    text-align: center;
+    line-height: 39px; 
+    margin-top: 0;
 }
 
 .footer-header-description {
@@ -329,6 +326,9 @@ html {
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
+    max-width: 588px;
+    margin: auto;
+    margin-top: 16px;
     text-align: center;
 }
 
@@ -339,34 +339,26 @@ html {
     align-items: center;
     padding: 0px;
     gap: 12px; 
-}
+    column-gap: 12px;
+    padding: 4px 8px; 
+    max-width: 250px;
+    margin: auto;
+    margin-top: 16px;
+    
+} 
 
 .footer-input {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
     padding: 4px 8px;
     isolation: isolate;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;    
     background: rgba(224, 163, 201, 0.56);
     border-radius: 8px 0px 0px 8px;
-}
-
-.experience-btnStart {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 6px 12px;
-    font-family: 'Poppins';
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-    background: linear-gradient(99.99deg, #B936F5 -21.45%, #C64C85 100%, #F1005B 100%);
-    border-radius: 0px 8px 8px 0px;
+    color: rgba(255, 255, 255, 0.56);
 }

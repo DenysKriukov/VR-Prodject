@@ -1,4 +1,10 @@
-
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
 .authorization {
     display: flex;
     flex-direction: column;
@@ -8,8 +14,10 @@
     gap: 14px;
 
     position: relative;
-    width: 592px;
-    height: 304px;
+    max-width: 592px;
+    max-height: 304px;
+
+ 
 
     background: #0E0E0E;
     border-radius: 6px;

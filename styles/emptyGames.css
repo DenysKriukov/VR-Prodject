@@ -1,24 +1,19 @@
 html {
 
     background: linear-gradient( 
-        180deg, 
-        #010208 16.39%,
-        #010206 20.51%, 
-        #040008 24.79%, 
-        #010101 30.46%, 
-        #010101 34.11%, 
-        #010101 36.21%, 
-        #010101 100%);
+    180deg, 
+    #010208 16.39%,
+    #010206 20.51%, 
+    #040008 24.79%, 
+    #010101 30.46%, 
+    #010101 34.11%, 
+    #010101 36.21%, 
+    #010101 100%);
 
-        color: #FFFFFF;
+    color: #FFFFFF;
 
     scroll-behavior: smooth;
-
 }
-
-/* body {
-    gap: 32px;
-} */
 
 .container {
     max-width: 1280px;
@@ -130,6 +125,12 @@ html {
     gap: 10px;  
     line-height: 24px;
 }
+
+.nav-button-burger {
+    display: none;
+}
+
+/* -----------------------empty games wrap */
 .empty-games-wrap {
     display: flex;
     flex-direction: column;
@@ -137,7 +138,8 @@ html {
     align-items: center;
     padding: 0px;
     gap: 16px;
-    height: 65vh;
+    height: 50vh;
+    width: 100%;
 }
 .empty-games-header {
     font-family: 'Poppins';
@@ -258,18 +260,4 @@ html {
     isolation: isolate;
     background: rgba(224, 163, 201, 0.56);
     border-radius: 8px 0px 0px 8px;
-}
-
-.experience-btnStart {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 6px 12px;
-    font-family: 'Poppins';
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-    background: linear-gradient(99.99deg, #B936F5 -21.45%, #C64C85 100%, #F1005B 100%);
-    border-radius: 0px 8px 8px 0px;
 }

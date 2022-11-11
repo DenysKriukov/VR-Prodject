@@ -26,8 +26,8 @@
         <div class="container">
             <div class="header-wrapper">
                 <a href="./index.html"><img  src="../assets/img/headerLogoLight.png" class="header-logo" alt="Logo"></a>
-                <div class="nav">
-                    <nav>
+                <div class="nav-wrap open">
+                    <nav class="nav">
                         <ul class="nav-list">
                             <li class="nav-item">
                                 <a href="./index.html" class="nav-link-home">Home</a></li>
@@ -36,9 +36,12 @@
                             <li class="nav-item">
                                 <a href="./usersPage.html" class="nav-link-users">Users</a></li>
                         </ul>
+                        <button class="nav-btnSign-in btn" type="submit" href="./singInDialog.html">Sign in</button>
                     </nav>
-                    <button class="nav-btnSign-in btn" type="submit">Sign in</button>
-                </div>
+                     <button class="nav-button-burger">
+                        <img width="35px" height="25px" src="../assets/icons/iconBurgerMenu.svg" alt="btn burger">
+                     </button>
+                </div> 
             </div>                          
         </div>
     </header>
@@ -47,7 +50,7 @@
     <section>
         <div class="container">
             <div class="games-header">
-                    <h3 class="games-header-text">VR Games</h3>
+                    <h3 class="games-header-text">VR Games<h3>
                 <div class="games-header-controll">
                     <button class="btnAdd btn">Add New Game</button>
                     <select class="btnSelect">
