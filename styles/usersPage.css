@@ -149,7 +149,8 @@ html {
     gap: 32px;
     margin-bottom: 32px;
   
-    align-self: stretch; 
+    /* align-self: stretch;  */
+    
 }
 
 .users-header {
@@ -206,6 +207,11 @@ html {
     gap: 36px;
   
     align-self: stretch;  
+    
+
+    overflow-y:scroll;
+    /* scroll-behavior: auto; */
+    /* scroll-behavior: smooth; */
 }
 .users-section li{
     display: flex;
@@ -220,9 +226,9 @@ html {
 }
 
 .users-section li p{ 
-    display: flex;
-    align-items: center;
-    text-align: center;
+    /* display: flex; */
+    /* align-items: center; */
+    /* text-align: center; */
 
     font-family: 'Poppins';
     font-style: normal;

@@ -1,3 +1,4 @@
+
 html {
 
     background: linear-gradient( 
@@ -13,6 +14,13 @@ html {
     color: #FFFFFF;
 
     scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .container {
@@ -138,7 +146,7 @@ html {
     align-items: center;
     padding: 0px;
     gap: 16px;
-    height: 50vh;
+    /* height: 50vh; */
     width: 100%;
 }
 .empty-games-header {
@@ -189,27 +197,30 @@ html {
 .footer {
     
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column;  */
     justify-content: center;
     align-items: center;
     padding-bottom: 8px; 
     /* box-sizing: border-box; */
-    width: 100%;
+    /* width: 100%; */
     /* background-image: url(../assets/img/footerPointingHands.png); */
    
-    /* mix-blend-mode: difference; */
-    padding: 67px 10px 62px ;
+    mix-blend-mode: difference;
+    /* padding: 67px 10px 62px ; */
     border-radius: 0px 8px 8px 0px;
-    
-    gap: 16px;
+    position: relative;
+    gap: 16px; 
 
-    
+    overflow: hidden;
+    /* background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
  } 
  .footer-img {
     /* box-sizing: border-box; */
-    width: 100%; background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    /* height: auto;  */
+    /* position: absolute; */
+    
  }
 
 .footer-wrapper {
