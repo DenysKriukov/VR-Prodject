@@ -83,7 +83,7 @@
         position: fixed;
         top: 0;
         bottom: 0;
-        left: ;
+        /* left: ; */
         right: 0;
         background-color: rgba(0, 0, 0, 0.87);
         display: flex;
