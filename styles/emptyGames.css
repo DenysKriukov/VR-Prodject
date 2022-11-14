@@ -194,34 +194,82 @@ body {
 
 /* ----------------- footer  ---- */
 
+
 .footer {
+    width: 100%;
+    margin-bottom: 8px; 
+    background-image: url("../assets/img/footerPointingHands.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 60px 15px;
+    border-radius: 8px;
+    box-sizing: border-box;
+ } 
+
+.footer-header-text {
+    text-align: center;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 39px; 
+    margin-top: 0;
+}
+
+.footer-header-description {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    max-width: 588px;
+    margin: auto;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.footer-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 12px; 
+    column-gap: 12px;
+    padding: 4px 8px; 
+    max-width: 250px;
+    margin: auto;
+    margin-top: 16px;
+} 
+
+.footer-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 4px 8px;
+    isolation: isolate;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;    
+    background: rgba(224, 163, 201, 0.56);
+    border-radius: 8px 0px 0px 8px;
+    color: rgba(255, 255, 255, 0.56);
+}
+
+
+/* .footer {
     
     display: flex;
-    /* flex-direction: column;  */
     justify-content: center;
     align-items: center;
     padding-bottom: 8px; 
-    /* box-sizing: border-box; */
-    /* width: 100%; */
-    /* background-image: url(../assets/img/footerPointingHands.png); */
-   
     mix-blend-mode: difference;
-    /* padding: 67px 10px 62px ; */
     border-radius: 0px 8px 8px 0px;
     position: relative;
     gap: 16px; 
-
     overflow: hidden;
-    /* background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; */
  } 
- .footer-img {
-    /* box-sizing: border-box; */
-    /* height: auto;  */
-    /* position: absolute; */
-    
- }
 
 .footer-wrapper {
     position: absolute;
@@ -237,7 +285,6 @@ body {
     font-weight: 700;
     font-size: 26px;
     line-height: 39px;
-    /* text-align: center; */
 }
 
 .footer-header-description {
@@ -271,4 +318,4 @@ body {
     isolation: isolate;
     background: rgba(224, 163, 201, 0.56);
     border-radius: 8px 0px 0px 8px;
-}
+} */
