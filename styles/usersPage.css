@@ -209,7 +209,8 @@ html {
     align-self: stretch;  
     
 
-    overflow-y:scroll;
+    overflow-x:hidden;
+    overflow-y: hidden;
     /* scroll-behavior: auto; */
     /* scroll-behavior: smooth; */
 }

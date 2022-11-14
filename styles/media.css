@@ -6,6 +6,7 @@
     .pagination {
         margin-bottom: 24px;
     }
+
     .games-section {
         justify-content: space-around;
     }
@@ -15,19 +16,24 @@
     .hero {
         flex-direction: column-reverse;
     }
+
     .hero-wrap-left {
         margin-top: 20px;
         align-items: center;
     }
+
     .hero-title {
         text-align: center;
     }
+
     .hero-description {
         text-align: center;
     }
+
     .footer {
         padding: 40px 15px;
     }
+
     .empty-games-header {
         font-size: 36px;
         line-height: 54px;
@@ -37,8 +43,11 @@
     .empty-games-description-text {
         font-size: 20px;
         line-height: 30px;
+    } 
+    .users-section  {
+        overflow-x:scroll;
+        overflow-y: hidden;
     }
-    
 }
 
 @media (max-width: 720px) {
@@ -52,20 +61,13 @@
     }
     .footer-header-description {
         padding: 0px 60px;
-    }
-    
-   
+    }  
 }
 
 @media (max-width: 600px) {
     .nav {
         display: none;
     }
-/* 
-    .open {
-        display: none;
-    }
-     */
 
     .nav-button-burger {
         display: block;
@@ -73,13 +75,17 @@
         background-color: transparent; 
     }
 
-    .nav-wrap.open .nav {
+    /* .hide {
+        display: none;
+    } */
+
+    .nav.open {
         position: fixed;
         top: 0;
         bottom: 0;
         left: ;
         right: 0;
-        background-color: rgba(0, 0, 0, 0.685);
+        background-color: rgba(0, 0, 0, 0.87);
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -87,7 +93,7 @@
         align-items: center;
         row-gap: 20px;
         z-index: 1;
-        padding: 60px 100px 40px 70px;
+        padding: 60px 100px 40px 170px;
         border-radius: 8px;
     }
 
@@ -96,17 +102,11 @@
         gap: 10px;
     }
   
-
-
-
-    /* .nav-wrap .open .nav {
-        position: fixed;
-    } */
-
     .awesome {
         flex-direction: column;
         gap: 10px;
     }
+
     .awesome-text {
         text-align: center;
     }
@@ -115,21 +115,27 @@
         flex-direction: column;
         margin-bottom: 24px;
     }
+
     .company-values-info {
         text-align: center;
     }
+
     .company-values-benefits {
         gap: 45px;
     }
+
     .benefits-items {
         gap: 12px;
     }
+
     .benefits-item {
         gap: 6px;
     }
+
     .benefits-icons {
         width: 50px;
     }
+
     .benefits-text {
         font-size: 10px;
         line-height: 15px;
@@ -138,39 +144,40 @@
     .footer {
         padding: 15px 15px;
     }  
+
     .footer-header-description {
         padding: 0px 60px;
     }
     
     .games-header {
-        flex-direction: column;
-        
+        flex-direction: column;   
         gap: 16px;
     }
 
     .games-header-controll {
         justify-content: space-between
-
     }
 
 }
 
 @media (max-width: 500px) {
     .footer {
-        
         padding: 10px 15px;
-    }   
+    }  
+
     .footer-header-text {
         font-size: 18px;
         line-height: 27px;
         
     }
+
     .footer-header-description {
         margin-top: 10px;
         line-height: 11px;
         margin-top: 10px;
         padding: 0px 40px;
     }
+    
     .footer-form {
         margin-top: 10px;
     }

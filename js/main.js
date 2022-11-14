@@ -10,12 +10,14 @@ AOS.init();
 // const toggleBurgerMenu = () => {
 //     console. log("123");
 // };
-const nawWrap = document.querySelector(".nav-wrap");
+const naw = document.querySelector(".nav");
 const navButtonBurger = document.querySelector(".nav-button-burger");
 
 
-nawWrap.onclick = () => {
-    
-   nawWrap.classList.toggle('open')
-    
+navButtonBurger.onclick = () => {
+
+   naw.classList.toggle('open')
+   
 }
+
+
