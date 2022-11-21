@@ -1,9 +1,18 @@
-.container {
+.container-modal-game {
+    display: none;
+}
+
+.container-modal-game.open {
+    position: fixed;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 100vh;
     width: 100vw;
+    background-color: #000000a8;
+    top: 0 ;
+    left: 0;
+    z-index: 999;
 }
 
 .newGame {

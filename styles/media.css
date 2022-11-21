@@ -44,8 +44,9 @@
         font-size: 20px;
         line-height: 30px;
     } 
-    .users-section  {
-        overflow-x:scroll;
+
+    .users-section ul {
+        overflow-x: scroll;
         overflow-y: hidden;
     }
 }
@@ -54,11 +55,13 @@
     .experience-wrap {
         flex-direction: column;
     }
+
     .experience-wrapr-right {
         text-align: center;
         align-items: center;
         max-width: 550px;
     }
+
     .footer-header-description {
         padding: 0px 60px;
     }  
@@ -75,15 +78,10 @@
         background-color: transparent; 
     }
 
-    /* .hide {
-        display: none;
-    } */
-
     .nav.open {
         position: fixed;
         top: 0;
         bottom: 0;
-        /* left: ; */
         right: 0;
         background-color: rgba(0, 0, 0, 0.87);
         display: flex;

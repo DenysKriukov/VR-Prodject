@@ -14,15 +14,16 @@ html {
         #010101 36.21%, 
         #010101 100%);
 
-        color: #FFFFFF;
-
+    color: #FFFFFF;
     scroll-behavior: smooth;
-
 }
 
-/* body {
-    gap: 32px;
-} */
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .container {
     max-width: 1280px;
@@ -144,13 +145,11 @@ html {
 .users-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: 0px;
     gap: 32px;
     margin-bottom: 32px;
-  
     /* align-self: stretch;  */
-    
 }
 
 .users-header {
@@ -159,18 +158,21 @@ html {
     justify-content: space-between;
     align-items: center;
     padding: 0px;
-    gap: 161px;
+    /* gap: 161px; */
+    margin-bottom: 32px;
     
     align-self: stretch;
 }
+
 .users-header-text {
     font-family: 'Poppins';
     font-weight: 900;
     font-size: 18px;
     line-height: 27px;
-    display: flex;
-    align-items: center;
+    /* display: flex; */
+    /* align-items: center; */
 }
+
 .users-header-controll {
     display: flex;
     flex-direction: row;
@@ -179,6 +181,7 @@ html {
     padding: 0px;
     gap: 32px;
 }
+
 .btnSelect {
     box-sizing: border-box;
     display: flex;
@@ -197,23 +200,31 @@ html {
 }
 
          /* -------users section  ------- */
+.users-section {
+    display: flex;
+    justify-content: center;
+    /* width: 1000px; */
+    /* overflow-x: scroll;
+    overflow-y: hidden; */
+    margin-bottom: 32px;
+    /* align-self: stretch;   */
+}
 
-.users-section  {
+.users-section ul {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 0px;
-    gap: 36px;
-  
-    align-self: stretch;  
-    
-
-    overflow-x:hidden;
+    gap: 32px;
+    width: 1000px;
+    overflow-x: hidden;
     overflow-y: hidden;
+    /* align-self: stretch;   */
     /* scroll-behavior: auto; */
     /* scroll-behavior: smooth; */
 }
+
 .users-section li{
     display: flex;
     flex-direction: column;
@@ -222,15 +233,17 @@ html {
     padding: 0px;
     gap: 28px;
 
+    white-space: nowrap;
+    
     align-self: stretch;
-    /* height: 380px; */
 }
 
 .users-section li p{ 
+    /* align-self: stretch; */
     /* display: flex; */
+    /* flex-wrap: nowrap; */
     /* align-items: center; */
     /* text-align: center; */
-
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
@@ -251,9 +264,8 @@ html {
     align-items: center;
     padding: 0px;
     gap: 2px;
-    
-    
 }
+
 .users-dots {
     width: 5px;
     height: 5px;
@@ -270,7 +282,6 @@ html {
     padding: 0px;
     gap: 8px;
     margin-bottom: 32px;
-    
 }
 
 .pagination-btn {
@@ -299,12 +310,15 @@ html {
 .pagination button:hover {
     background: #d2d2d2;
 }
+
 .pagination .btn--active:hover {
     background: #ffffff;
 }
+
 .pagination .btn--disabled:hover {
     background: #ffffff;
 }
+
 /* ----------------- footer  ---- */
 
 .footer {

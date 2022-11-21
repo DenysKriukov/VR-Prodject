@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../styles/usersPage.css">
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/media.css">
+    <link rel="stylesheet" href="../styles/singInDialog.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
@@ -36,7 +37,7 @@
                             <li class="nav-item">
                                 <a href="#" class="nav-link-users">Users</a></li>
                         </ul>
-                        <button class="nav-btnSign-in btn" type="submit">Sign in</button>
+                        <button class="nav-btnSign-in" type="submit">Sign in</button>
                     </nav>
                      <button class="nav-button-burger">
                         <img width="35px" height="25px" src="../assets/icons/iconBurgerMenu.svg" alt="btn burger">
@@ -49,7 +50,7 @@
     <!-- ----------------------------users header ----------->
     <section>
         <div class="container">
-            <div class="users-wrapper">
+            <!-- <div class="users-wrapper"> -->
                 <div class="users-header">
                         <h3 class="users-header-text">VR Users</h3>
                     <div class="users-header-controll">
@@ -58,75 +59,76 @@
                         </select>
                     </div>
                 </div>
-    
-                <!----------------------- users section -->
 
-                <ul class="users-section">
-                    <li>
-                        <p>Avatar</p>
-                        <img class="users-img" src="../assets/img/heroPeople3avatar.png" alt="user">                               <img class="users-img" src="../assets/img/heroPeople3avatar.png" alt="user">                               <img class="users-img" src="../assets/img/heroPeople3avatar.png" alt="user">                               <img class="users-img" src="../assets/img/heroPeople3avatar.png" alt="user">                               <img class="users-img" src="../assets/img/heroPeople3avatar.png" alt="user">                           </li>
-                    <li>
-                        <p>Home</p>
-                        <div class="users-wrap-name"><p>Andrzey Dumbra</p></div>
-                        <div class="users-wrap-name"><p>Viktor Dumbra</p></div>
-                        <div class="users-wrap-name"><p>Oleg Dumbra</p></div>
-                        <div class="users-wrap-name"><p>Oleg Dumbra</p></div>
-                        <div class="users-wrap-name"><p>Oleg Dumbra</p></div>            
-                    </li>
-                    <li>
-                        <p>Country</p>
-                        <div class="users-wrap"><p>Poland</p></div>
-                        <div class="users-wrap"><p>Ukraine</p></div>
-                        <div class="users-wrap"><p>Poland</p></div>
-                        <div class="users-wrap"><p>Poland</p></div>
-                        <div class="users-wrap"><p>Poland</p></div>             
-                    </li>
-                    <li>
-                        <p>Age</p>
-                        <div class="users-wrap"><p>17</p></div>
-                        <div class="users-wrap"><p>22</p></div>
-                        <div class="users-wrap"><p>19</p></div>
-                        <div class="users-wrap"><p>17</p></div>
-                        <div class="users-wrap"><p>27</p></div>             
-                    </li>
-                    <li>
-                        <p>Email</p>
-                        <div class="users-wrap"><p>Email_example@gmail.com</p> </div>
-                        <div class="users-wrap"><p>Email_example@gmail.com</p></div>
-                        <div class="users-wrap"><p>Email_example@gmail.com</p></div>
-                        <div class="users-wrap"><p>Email_example@gmail.com</p></div>
-                        <div class="users-wrap"><p>Email_example@gmail.com</p></div>           
-                    </li>
-                    <li>
-                        <p>Actions</p>  
-                        <div class="users-actions">
-                            <div class="users-dots"></div>
-                            <div class="users-dots"></div>
-                            <div class="users-dots"></div>
-                        </div>  
-                        <div class="users-actions">
-                            <div class="users-dots"></div>
-                            <div class="users-dots"></div>
-                            <div class="users-dots"></div>
-                        </div>  
-                        <div class="users-actions">
-                            <div class="users-dots"></div>
-                            <div class="users-dots"></div>
-                            <div class="users-dots"></div>
-                        </div>  
-                        <div class="users-actions">
-                            <div class="users-dots"></div>
-                            <div class="users-dots"></div>
-                            <div class="users-dots"></div>
-                        </div>  
-                        <div class="users-actions">
-                            <div class="users-dots"></div>
-                            <div class="users-dots"></div>
-                            <div class="users-dots"></div>
-                        </div>             
-                    </li>
-                </ul>
-             </div>
+                <!----------------------- users section -->
+                <div class="users-section">
+                     <ul>
+                        <li>
+                            <p>Avatar</p>
+                            <img class="users-img" src="../assets/img/heroPeople3avatar.png" alt="user">                               <img class="users-img" src="../assets/img/heroPeople3avatar.png" alt="user">                               <img class="users-img" src="../assets/img/heroPeople3avatar.png" alt="user">                               <img class="users-img" src="../assets/img/heroPeople3avatar.png" alt="user">                               <img class="users-img" src="../assets/img/heroPeople3avatar.png" alt="user">                           </li>
+                        <li>
+                            <p>Home</p>
+                            <div class="users-wrap-name"><p>Andrzey Dumbra</p></div>
+                            <div class="users-wrap-name"><p>Viktor Dumbra</p></div>
+                            <div class="users-wrap-name"><p>Oleg Dumbra</p></div>
+                            <div class="users-wrap-name"><p>Oleg Dumbra</p></div>
+                            <div class="users-wrap-name"><p>Oleg Dumbra</p></div>            
+                        </li>
+                        <li>
+                            <p>Country</p>
+                            <div class="users-wrap"><p>Poland</p></div>
+                            <div class="users-wrap"><p>Ukraine</p></div>
+                            <div class="users-wrap"><p>Poland</p></div>
+                            <div class="users-wrap"><p>Poland</p></div>
+                            <div class="users-wrap"><p>Poland</p></div>             
+                        </li>
+                        <li>
+                            <p>Age</p>
+                            <div class="users-wrap"><p>17</p></div>
+                            <div class="users-wrap"><p>22</p></div>
+                            <div class="users-wrap"><p>19</p></div>
+                            <div class="users-wrap"><p>17</p></div>
+                            <div class="users-wrap"><p>27</p></div>             
+                        </li>
+                        <li>
+                            <p>Email</p>
+                            <div class="users-wrap"><p>Email_example@gmail.com</p> </div>
+                            <div class="users-wrap"><p>Email_example@gmail.com</p></div>
+                            <div class="users-wrap"><p>Email_example@gmail.com</p></div>
+                            <div class="users-wrap"><p>Email_example@gmail.com</p></div>
+                            <div class="users-wrap"><p>Email_example@gmail.com</p></div>           
+                        </li>
+                        <li>
+                            <p>Actions</p>  
+                            <div class="users-actions">
+                                <div class="users-dots"></div>
+                                <div class="users-dots"></div>
+                                <div class="users-dots"></div>
+                            </div>  
+                            <div class="users-actions">
+                                <div class="users-dots"></div>
+                                <div class="users-dots"></div>
+                                <div class="users-dots"></div>
+                            </div>  
+                            <div class="users-actions">
+                                <div class="users-dots"></div>
+                                <div class="users-dots"></div>
+                                <div class="users-dots"></div>
+                            </div>  
+                            <div class="users-actions">
+                                <div class="users-dots"></div>
+                                <div class="users-dots"></div>
+                                <div class="users-dots"></div>
+                            </div>  
+                            <div class="users-actions">
+                                <div class="users-dots"></div>
+                                <div class="users-dots"></div>
+                                <div class="users-dots"></div>
+                            </div>             
+                        </li>
+                    </ul>
+                </div>
+            <!-- </div > -->
         </div>
         
     </section>
@@ -146,6 +148,21 @@
             </div>
         </div>
     </section>
+
+        <!-- ----------------------------sing in dialog-------------- -->
+
+        <div class="container-modal">
+            <div class="authorization">
+               <div class="modal-header">
+                   <h3 class="modal-header-text">Authorization</h3>
+               </div> 
+               <form class="modal-form">
+                   <input class="modal-input modal-email" type="email" placeholder="Email or username" required>
+                   <input class="modal-input modal-password" type="password" placeholder="Password" required>
+                   <button class="modal-SignIn btn" type="submit">Sign in</button>
+               </form> 
+           </div>
+       </div>
 
     <!-- --------------------------footer------------ -->
 
