@@ -1,13 +1,10 @@
 const eMailForm = document.querySelector('.footer-form');
 const eMail = document.querySelector('.footer-input');
 
-const footerSubmitOf = (e) => {
+const footerFormSubmit = (e) => {
     e.preventDefault ();
 
-    let i= {
-        email: `${eMail.value}`,
-    };
-    console.log(i);
-    eMail.value = '';
+    console.log('email:', eMail.value);
+    eMail.value = "";
 };
-eMailForm.addEventListener("submit", footerSubmitOf);
+eMailForm.addEventListener("submit", footerFormSubmit); 
