@@ -10,15 +10,15 @@ AOS.init();
 // const toggleBurgerMenu = () => {
 //     console. log("123");
 // };
-const nav = document.querySelector(".nav");
-const navButtonBurger = document.querySelector(".nav-button-burger");
+// const nav = document.querySelector(".nav");
+// const navButtonBurger = document.querySelector(".nav-button-burger");
 
 
-navButtonBurger.onclick = () => {
+// navButtonBurger.onclick = () => {
 
-   nav.classList.toggle('open')
+//    nav.classList.toggle('open')
    
-}
+// }
 
 
 // const btnInvite = document.querySelector(".hero-btnInvite");
@@ -28,10 +28,10 @@ navButtonBurger.onclick = () => {
 // }
 
 
-const btnGetItNav = document.querySelector(".experience-btnGet");
+// const btnGetItNav = document.querySelector(".experience-btnGet");
 
-btnGetItNav.onclick = () => {
-   window.open ("https://store.steampowered.com", "_blank");
-}
+// btnGetItNav.onclick = () => {
+//    window.open ("https://store.steampowered.com", "_blank");
+// }
   
  
