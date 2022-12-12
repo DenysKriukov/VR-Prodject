@@ -24,7 +24,7 @@ navButtonBurger.onclick = () => {
 const btnInvite = document.querySelector(".hero-btnInvite");
 
 btnInvite.onclick = () => {
-   location = "mailto: abc@example.com";
+   location = "mailto:";
 }
 
 
