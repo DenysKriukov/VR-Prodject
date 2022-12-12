@@ -40,9 +40,24 @@
                         <img width="35px" height="25px" src="../assets/icons/iconBurgerMenu.svg" alt="btn burger">
                      </button>
                 </div> 
-            </div>                          
+            </div>
         </div>
     </header>
+
+        <!-- ----------------------------sing in dialog-------------- -->
+
+        <div class="overlay"> </div>
+        <div class="authorization">
+           <div class="modal-header">
+               <h3 class="modal-header-text">Authorization</h3>
+           </div> 
+           <form class="modal-form">
+               <input class="modal-input modal-email" type="email" placeholder="Email or username" required>
+               <input class="modal-input modal-password" type="password" placeholder="Password" required>
+               <button class="modal-SignIn btn" type="submit">Sign in</button>
+           </form> 
+       </div>
+
 
     <!-- ---------------------------- Empty games ----------->
     <section>
@@ -66,8 +81,8 @@
                 <h4 class="footer-header-text">Explore product in new way</h4>
                 <p class="footer-header-description">We specialize in creating visual identities for products and branda in your company.</p>    
                 <form class="footer-form" >
-                    <input class="foote r-input" type="email" placeholder="Your Email">
-                    <button class="experience-btnStart btn">start</button>
+                    <input class="footer-input" type="email" placeholder="Your Email">
+                    <button class="footer-btnStart btn">start</button>
                 </form>
             </div>
         </div>    
@@ -75,10 +90,10 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../js/main.js"></script>
     <script src="../js/game.js"></script>
     <script src="../js/signIn.js"></script>
-
-    <script src="../js/main.js"></script>
+    <script src="../js/emailForm.js"></script>
 </body>
 
 </html>

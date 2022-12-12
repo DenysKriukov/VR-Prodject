@@ -6,16 +6,48 @@
 
 // addNewGame.addEventListener('click', handleaddNewGame);
 
+const overlayNewGame = document.querySelector(".overlayNewGame");
+const authNewGame = document.querySelector(".newGame");
+const addButton = document.querySelector(".btnAdd");
+const closeAuthNewGame = document.querySelector(".overlayNewGame");
 
-const addGame = document.querySelector(".container-modal-game");
-const addNewGameBtn = document.querySelector(".btnAdd");
-const closeaddGame = document.querySelector(".container-modal-game");
-
-addNewGameBtn.addEventListener('click', () => {
-   addGame.classList.add('open');
+addButton.addEventListener('click', () => {
+   overlayNewGame.classList.add('open');
+   authNewGame.classList.add('open');
+   scrollController.disabledScroll();
 })
 
-closeaddGame.addEventListener('click', () => {
-   addGame.classList.remove('open');
+closeAuthNewGame.addEventListener('click', () => {
+   overlayNewGame.classList.remove('open');
+   authNewGame.classList.remove('open');
+   scrollController.enabledScroll();
 })
 
+// const scrollController = {
+//    scrollPosition: 0,
+//    disabledScroll () {
+//       scrollController.scrollPosition = window.scrollY;
+//       document.body.style.cssText = `
+//         overflow: hidden;
+//         top: -${scrollController.scrollPosition}px;
+//         left: 0;
+//         height: 100vh;
+//         width: 100 vw;
+//         padding-right: ${window.innerWidth - document.body.offsetWidth}px;
+//       `;
+//       document.documentElement.style.scrollBehavior = 'unset';
+//    },
+//    enabledScroll () {
+//       document.body.style.cssText = '';
+//       window.scroll({top: scrollController.scrollPosition})
+//       document.documentElement.style.scrollBehavior = '';
+//    }
+// }
+
+document.addEventListener("keydown", function (e) { 
+  if (e.key === "Escape" && !auth.classList.contains("add('open')")) {
+   overlayNewGame.classList.remove('open');
+   authNewGame.classList.remove('open');
+   scrollController.enabledScroll();
+  }
+});

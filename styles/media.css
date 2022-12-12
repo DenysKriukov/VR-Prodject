@@ -1,6 +1,7 @@
-@media (max-width: 2200px) {
-    .authorization.open  {
-        left: 32%;
+@media (max-width: 5200px) {
+    .authorization.open,
+    .newGame.open  {
+        left: 30%;
         width: 592px;
     }
 }
@@ -17,7 +18,8 @@
     .games-section {
         justify-content: space-around;
     }
-    .authorization.open  {
+    .authorization.open,
+    .newGame.open  {
         left: 20%;
         width: 550px;
     }
@@ -60,7 +62,8 @@
         overflow-x: scroll;
         overflow-y: hidden;
     }
-    .authorization.open  {
+    .authorization.open,
+    .newGame.open   {
         left: 15%;
         width: 450px;
     }
@@ -80,7 +83,8 @@
     .footer-header-description {
         padding: 0px 60px;
     }  
-    .authorization.open  {
+    .authorization.open,
+    .newGame.open  {
         left: 10%;
         width: 400px;
     }
@@ -175,7 +179,8 @@
     .games-header-controll {
         justify-content: space-between
     }
-    .authorization.open  {
+    .authorization.open,
+    .newGame.open  {
         left: 10%;
         width: 350px;
     }
@@ -203,7 +208,8 @@
     .footer-form {
         margin-top: 10px;
     }
-    .authorization.open  {
+    .authorization.open,
+    .newGame.open   {
         left: 5%;
         width: 300px;
     }

@@ -44,9 +44,23 @@
                         <img width="35px" height="25px" src="../assets/icons/iconBurgerMenu.svg" alt="btn burger">
                      </button>
                 </div> 
-            </div>                          
+            </div>
         </div>
     </header>
+
+    <!-- ----------------------------sing in dialog-------------- -->
+
+    <div class="overlay"> </div>
+        <div class="authorization">
+           <div class="modal-header">
+               <h3 class="modal-header-text">Authorization</h3>
+           </div> 
+           <form class="modal-form">
+               <input class="modal-input modal-email" type="email" placeholder="Email or username" required>
+               <input class="modal-input modal-password" type="password" placeholder="Password" required>
+               <button class="modal-SignIn btn" type="submit">Sign in</button>
+           </form> 
+       </div>
 
     <!-- ----------------------------games header ----------->
     <section>
@@ -65,39 +79,37 @@
 
     <!-- ---------------------add new game dialog---------- -->
 
-    <div class="container-modal-game">
-        <div class="newGame">
-            <div class="modal-header">
-                <h5 class="modal-header-text">Add New Game</h5>
-            </div>
-            <form class="modal-form">
-                <input
-                class="newGame-name modal-input"
-                type="text"
-                placeholder="Game name"
-                />
-                <input
-                class="newGame-description modal-input"
-                type="text"
-                placeholder="Game description"
-                />
-                <input
-                class="newGame-review modal-input"
-                type="text"
-                placeholder="Game review"
-                />
-                <input
-                class="newGame-image modal-input"
-                type="text"
-                placeholder="Game image"
-                />
-                <button class="modal-Add btn realities-btn" type="submit">
-                Add New Game
-                </button>
-            </form>
-            </div>
+    <div class="overlayNewGame"> </div>
+    <div class="newGame">
+        <div class="modal-header">
+            <h5 class="modal-header-text">Add New Game</h5>
         </div>
-
+        <form class="modal-form">
+            <input
+            class="newGame-name modal-input"
+            type="text"
+            placeholder="Game name"
+            />
+            <input
+            class="newGame-description modal-input"
+            type="text"
+            placeholder="Game description"
+            />
+            <input
+            class="newGame-review modal-input"
+            type="text"
+            placeholder="Game review"
+            />
+            <input
+            class="newGame-image modal-input"
+            type="text"
+            placeholder="Game image"
+            />
+            <button class="modal-Add btn realities-btn" type="submit">
+            Add New Game
+            </button>
+        </form>
+    </div>
 
 
 <!-- -----------------------------games section-------- -->
@@ -282,21 +294,6 @@
         </div>
     </section>
 
-    <!-- ----------------------------sing in dialog-------------- -->
-
-    <div class="container-modal">
-        <div class="authorization">
-           <div class="modal-header">
-               <h3 class="modal-header-text">Authorization</h3>
-           </div> 
-           <form class="modal-form">
-               <input class="modal-input modal-email" type="email" placeholder="Email or username" required>
-               <input class="modal-input modal-password" type="password" placeholder="Password" required>
-               <button class="modal-SignIn btn" type="submit">Sign in</button>
-           </form> 
-       </div>
-   </div>
-
     <!-- --------------------------footer------------ -->
 
     <footer>
@@ -306,7 +303,7 @@
                 <p class="footer-header-description">We specialize in creating visual identities for products and branda in your company.</p>    
                 <form class="footer-form" >
                     <input class="footer-input" type="email" placeholder="Your Email">
-                    <button class="experience-btnStart btn">start</button>
+                    <button class="footer-btnStart btn">start</button>
                 </form>
             </div>
         </div>    
@@ -318,6 +315,7 @@
     <script src="../js/game.js"></script>
     <script src="../js/signIn.js"></script>
     <script src="../js/addNewGame.js"></script>
+    <script src="../js/emailForm.js"></script>
 
 
 </body>
