@@ -1,7 +1,7 @@
 const inviteFriends = document.querySelector(".hero-btnInvite");
 
 const handleInviteFriends = () => {
-   console.log("handleInviteFriends");
+   location = "mailto:";
 };
 
 inviteFriends.addEventListener('click', handleInviteFriends);

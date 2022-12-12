@@ -21,11 +21,11 @@ navButtonBurger.onclick = () => {
 }
 
 
-const btnInvite = document.querySelector(".hero-btnInvite");
+// const btnInvite = document.querySelector(".hero-btnInvite");
 
-btnInvite.onclick = () => {
-   location = "mailto:";
-}
+// btnInvite.onclick = () => {
+//    location = "mailto:";
+// }
 
 
 const btnGetItNav = document.querySelector(".experience-btnGet");
