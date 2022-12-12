@@ -18,3 +18,4 @@ addNewGameBtn.addEventListener('click', () => {
 closeaddGame.addEventListener('click', () => {
    addGame.classList.remove('open');
 })
+

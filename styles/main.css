@@ -49,11 +49,15 @@ html {
 /* -------------------------- header ------------------------------ */
 
 .header {
+    position: sticky;
+    top: 0px;
     padding-top: 16px;
     margin-bottom: 32px;
+    background:  #010208d0 16.39%;
+        z-index: 1;
 }
 
-.header-wrapper {
+.header-wrapper { 
     display: flex; 
     align-items: center;
     justify-content: space-between; 
@@ -601,7 +605,7 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 4px 8px;
+    padding: 6px 8px;
     isolation: isolate;
     font-family: 'Poppins';
     font-weight: 400;
@@ -610,4 +614,19 @@ html {
     background: rgba(224, 163, 201, 0.56);
     border-radius: 8px 0px 0px 8px;
     color: rgba(255, 255, 255, 0.56);
+}
+
+.experience-btnStart {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    background: linear-gradient(99.05deg,
+    #BC3CD8 0.07%, #C54B8C 106.32%);
+    border-radius: 0px 8px 8px 0px;
+    border-color: rgb(177, 43, 226); 
+    cursor: pointer;
+    padding: 5px 12px;
+    gap: 10px;
 }

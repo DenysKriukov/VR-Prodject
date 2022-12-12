@@ -20,5 +20,18 @@ navButtonBurger.onclick = () => {
    
 }
 
+
+const btnInvite = document.querySelector(".hero-btnInvite");
+
+btnInvite.onclick = () => {
+   location = "mailto: abc@example.com";
+}
+
+
+const btnGetItNav = document.querySelector(".experience-btnGet");
+
+btnGetItNav.onclick = () => {
+   window.open ("https://store.steampowered.com", "_blank");
+}
   
  
