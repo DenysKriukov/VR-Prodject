@@ -199,7 +199,7 @@ body {
     padding: 8px 14px;
     border: 1px solid #BC3CD8;
     border-radius: 6px;
-    background-color: transparent;
+    background-color: #010101;
     color: #fff;
 }
 
@@ -275,6 +275,47 @@ body {
     height: 5px;
     border-radius: 100%;
     background-color: #fff;
+}
+
+.users-actions:hover {
+    background-color: #C54B8C;
+} 
+
+.role {
+    display: none;
+    position: absolute;
+    padding: 16px 16px;
+    width: 116px;
+    background: #010101;
+    border: 1px solid #BC3CD8;
+    border-radius: 6px;
+    top: 250px;
+    right: 400px;
+    z-index: 12;
+}
+
+.role-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.role-list a {
+    text-decoration: none;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 0%;
+    padding: 8px 14px;
+    
+    border-radius: 6px;
+    background-color: #010101;
+    color: #fff;
 }
 
 /* ----------------- pagination ----- */

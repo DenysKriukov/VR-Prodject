@@ -386,6 +386,7 @@ html {
     backdrop-filter: blur(5.71745px);  
     border-radius: 8px;
     max-width: 280px;
+    color: #FFFFFF;
 }
 
 .clients-say-comments-name {
@@ -425,6 +426,10 @@ html {
     align-items: center;
     padding: 0px;
     gap: 8px;
+}
+
+.clients-img {
+    height: 36px;
 }
 
 .clients-name {

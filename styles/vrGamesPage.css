@@ -186,9 +186,10 @@ body {
     padding: 8px 14px;
     border: 1px solid #BC3CD8;
     border-radius: 6px;
-    background-color: transparent;
+    background-color: #010101f1 ;
     color: #fff;
 }
+
 
 /* ------------ games section ------- */
 
