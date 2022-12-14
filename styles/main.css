@@ -207,11 +207,15 @@ html {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-right: 32px;
+    margin-right: 16px;
 }
 
 .hero-people-list li+li {
     margin-left: -5px;
+}
+
+.hero-people-img {
+    height: 48px;
 }
 
 .hero-dot {

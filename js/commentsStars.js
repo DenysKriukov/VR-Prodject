@@ -4,7 +4,7 @@ const commentsList = document.querySelector(".clients-say-comments");
 
 const renderItem = (comment) =>{
     const liElement = document.createElement("li");
-    liElement.classList.add("clients-say-comments-name");
+    liElement.classList.add("clients-say-comments");
 
     liElement.innerHTML = `
     <li class="clients-say-comments-list">
