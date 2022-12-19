@@ -4,7 +4,6 @@ const heroPeople = document.querySelector(".hero-people-list");
 
 const renderItem = (user) =>{
     const liElement = document.createElement("li");
-    liElement.classList.add("hero-people-list-item");
 
     liElement.innerHTML = `
     <li>

@@ -146,16 +146,6 @@ body {
 
 /* -- ------------- users header -----------> */
 
-.users-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px;
-    gap: 32px;
-    margin-bottom: 32px;
-    /* align-self: stretch;  */
-}
-
 .users-header {
     display: flex;
     flex-direction: row;
@@ -204,81 +194,71 @@ body {
 }
 
          /* -------users section  ------- */
-.users-section {
-    display: flex;
-    justify-content: center;
-    /* width: 1000px; */
-    /* overflow-x: scroll;
-    overflow-y: hidden; */
-    margin-bottom: 32px;
-    /* align-self: stretch;   */
-}
-
-.users-section ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px;
-    gap: 32px;
-    width: 1000px;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    /* align-self: stretch;   */
-    /* scroll-behavior: auto; */
-    /* scroll-behavior: smooth; */
-}
-
-.users-section li{
+.user-list-wrap {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    padding: 0px;
-    gap: 28px;
-
-    white-space: nowrap;
-    
-    align-self: stretch;
+    /* padding: 0px;
+    gap: 32px; */
+    margin-bottom: 32px;
+    width: 100%;
+    /* text-align: -webkit-center; */
+    overflow-x: hidden;
+    overflow-y: hidden; 
 }
 
-.users-section li p{ 
-    /* align-self: stretch; */
-    /* display: flex; */
-    /* flex-wrap: nowrap; */
-    /* align-items: center; */
-    /* text-align: center; */
+.users-list-class {
+    width: 100%;
+    max-width: 928px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+    width: 1000px;
+ 
+}
+
+    .users-list-class tr{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
-    /* or 125% */
+    /* align-self: stretch;   */
+    /* scroll-behavior: auto; */
+    /* scroll-behavior: smooth; */
 }
 
-.users-img {
+.users-list-class tbody {
+    width: fit-content;
+    text-align: center;
+    /* overflow-x: hidden; */
+    /* padding-bottom: 28px; */
+}
+
+.users-list-class th {
+    padding-bottom: 28px;
+}
+
+.users-list td,
+.users-list-row td {
+    vertical-align: middle;
+}
+
+.users-list-img {
     width: 44px;
     height: 44px;
 }
 
-.users-actions {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-    gap: 2px;
-}
-
 .users-dots {
-    width: 5px;
-    height: 5px;
-    border-radius: 100%;
-    background-color: #fff;
+    padding: 8px 14px;
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
 }
 
-.users-actions:hover {
-    background-color: #C54B8C;
+.users-list-dots:hover {
+    filter: invert(58%) sepia(100%) saturate(7480%) hue-rotate(280deg) brightness(96%) contrast(110%);
 } 
 
 .role {

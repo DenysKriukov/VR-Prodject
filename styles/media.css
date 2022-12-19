@@ -58,9 +58,10 @@
         line-height: 30px;
     } 
 
-    .users-section ul {
+    .user-list-wrap {
         overflow-x: scroll;
         overflow-y: hidden;
+        align-items: flex-start;
     }
     .authorization.open,
     .newGame.open   {

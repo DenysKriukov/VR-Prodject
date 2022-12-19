@@ -50,45 +50,156 @@
     <!-- ----------------------------users header ----------->
     <section>
         <div class="container">
-            <!-- <div class="users-wrapper"> -->
-                <div class="users-header">
-                        <h3 class="users-header-text">VR Users</h3>
-                    <div class="users-header-controll">
-                        <select id="select" class="btnSelect">
-                          <option class="users-change-role" value="default">Sort By Role</option>
-                          <option class="users-change-role" vlaue="admin">admin</option>
-                          <option class="users-change-role" vlaue="moderator">moderator</option>
-                          <option class="users-change-role" vlaue="user">user</option>
-                        </select>
-                    </div>
+            <div class="users-header">
+                    <h3 class="users-header-text">VR Users</h3>
+                <div class="users-header-controll">
+                    <select id="select" class="btnSelect">
+                        <option class="users-change-role" value="default">Sort By Role</option>
+                        <option class="users-change-role" vlaue="admin">admin</option>
+                        <option class="users-change-role" vlaue="moderator">moderator</option>
+                        <option class="users-change-role" vlaue="user">user</option>
+                    </select>
                 </div>
-    <!-- ----------------------------sing in dialog-------------- -->
+            </div>
+            
+                <!-- ----------------------------sing in dialog-------------- -->
 
-    <div class="overlay"> </div>
-        <div class="authorization">
-           <div class="modal-header">
-               <h3 class="modal-header-text">Authorization</h3>
-           </div> 
-           <form class="modal-form">
-               <input class="modal-input modal-email" type="email" placeholder="Email or username" required>
-               <input class="modal-input modal-password" type="password" placeholder="Password" required>
-               <button class="modal-SignIn btn" type="submit">Sign in</button>
-           </form> 
-       </div>
-
-                <!----------------------- users section -->
-                <div class="users-section">
-                   
-                </div>
-                <div class="role">
-                    <ul class="role-list">
-                        <li class="role-item"><a href="#">Send email</a></li> 
-                        <li class="role-item"><a href="#">Change role</a></li>
-                        <li class="role-item"><a href="#">Block</a></li>
-                        <li class="role-item"><a href="#">Delete</a></li>
-                    </ul>
+            <div class="overlay"> </div>
+            <div class="authorization">
+                <div class="modal-header">
+                    <h3 class="modal-header-text">Authorization</h3>
                 </div> 
+                <form class="modal-form">
+                    <input class="modal-input modal-email" type="email" placeholder="Email or username" required>
+                    <input class="modal-input modal-password" type="password" placeholder="Password" required>
+                    <button class="modal-SignIn btn" type="submit">Sign in</button>
+                </form> 
+            </div>
         
+        <div class="user-list-wrap">
+            <table class="users-list-class">
+                <!-- <tbody>
+                    <tr>
+                        <th>Avatar</th>
+                        <th>Name</th>
+                        <th>Country</th>
+                        <th>Age</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Actions</th>
+                    </tr>
+                </tbody>
+
+                <tbody>
+                    <tr class="users-list">
+                        <td><img class="users-list-img" src="../assets/img/heroPeople1avatar.png" alt="user name"></td>
+                        <td>Mary Perry</td>
+                        <td>USA</td>
+                        <td>44</td>
+                        <td>perry@gmail.com</td>
+                        <td>admin</td>
+                        <td class="users-list-action">
+                            <button type="submit" class="users-dots">
+                                <img class="users-list-dots" src="../assets/img/userListDots.svg" alt="">
+                            </button>
+                            <div class="role hidden">
+                                <ul class="role-list">
+                                    <li class="role-item role-send-email"><button>Send email</button></li>
+                                    <li class="role-item role-change-role"><button>Change Role</button></li>
+                                    <li class="role-item role-block"><button>Block</button></li>
+                                    <li class="role-item role-delete"><button>Delete</button></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="users-list">
+                        <td><img class="users-list-img" src="../assets/img/heroPeople1avatar.png" alt="user name"></td>
+                        <td>Mary Perry</td>
+                        <td>USA</td>
+                        <td>44</td>
+                        <td>perry@gmail.com</td>
+                        <td>admin</td>
+                        <td class="users-list-user-action">
+                            <button type="submit" class="users-dots">
+                                <img class="users-list-dots" src="../assets/img/userListDots.svg" alt="">
+                            </button>
+                            <div class="role hidden">
+                                <ul class="role-list">
+                                    <li class="role-item role-send-email"><button>Send email</button></li>
+                                    <li class="role-item role-change-role"><button>Change Role</button></li>
+                                    <li class="role-item role-block"><button>Block</button></li>
+                                    <li class="role-item role-delete"><button>Delete</button></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="users-list">
+                        <td><img class="users-list-img" src="../assets/img/heroPeople1avatar.png" alt="user name"></td>
+                        <td>Mary Perry</td>
+                        <td>USA</td>
+                        <td>44</td>
+                        <td>perry@gmail.com</td>
+                        <td>admin</td>
+                        <td class="users-list-user-action">
+                            <button type="submit" class="users-dots">
+                                <img class="users-list-dots" src="../assets/img/userListDots.svg" alt="">
+                            </button>
+                            <div class="role hidden">
+                                <ul class="role-list">
+                                    <li class="role-item role-send-email"><button>Send email</button></li>
+                                    <li class="role-item role-change-role"><button>Change Role</button></li>
+                                    <li class="role-item role-block"><button>Block</button></li>
+                                    <li class="role-item role-delete"><button>Delete</button></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="users-list">
+                        <td><img class="users-list-img" src="../assets/img/heroPeople1avatar.png" alt="user name"></td>
+                        <td>Mary Perry</td>
+                        <td>USA</td>
+                        <td>44</td>
+                        <td>perry@gmail.com</td>
+                        <td>admin</td>
+                        <td class="users-list-user-action">
+                            <button type="submit" class="users-dots">
+                                <img class="users-list-dots" src="../assets/img/userListDots.svg" alt="">
+                            </button>
+                            <div class="role hidden">
+                                <ul class="role-list">
+                                    <li class="role-item role-send-email"><button>Send email</button></li>
+                                    <li class="role-item role-change-role"><button>Change Role</button></li>
+                                    <li class="role-item role-block"><button>Block</button></li>
+                                    <li class="role-item role-delete"><button>Delete</button></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="users-list">
+                        <td><img class="users-list-img" src="../assets/img/heroPeople1avatar.png" alt="user name"></td>
+                        <td>Mary Perry</td>
+                        <td>USA</td>
+                        <td>44</td>
+                        <td>perry@gmail.com</td>
+                        <td>admin</td>
+                        <td class="users-list-user-action">
+                            <button type="submit" class="users-dots">
+                                <img class="users-list-dots" src="../assets/img/userListDots.svg" alt="">
+                            </button>
+                            <div class="role hidden">
+                                <ul class="role-list">
+                                    <li class="role-item role-send-email"><button>Send email</button></li>
+                                    <li class="role-item role-change-role"><button>Change Role</button></li>
+                                    <li class="role-item role-block"><button>Block</button></li>
+                                    <li class="role-item role-delete"><button>Delete</button></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody> -->
+            </table>
+        </div>
+    </div>
     </section>
 
     <!-- --------------------------pagination---- -->
@@ -129,6 +240,7 @@
     <script src="../js/game.js"></script>
     <script src="../js/signIn.js"></script>
     <script src="../js/emailForm.js"></script>
+    <script type="module" src="../js/userData.js"></script> 
 
 
 </body>
