@@ -240,8 +240,8 @@ body {
     padding-bottom: 28px;
 }
 
-.users-list td,
-.users-list-row td {
+
+.users-list-class td {
     vertical-align: middle;
 }
 

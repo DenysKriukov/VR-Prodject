@@ -4,7 +4,7 @@ const usersTableRowsList = document.querySelector(".users-list-class");
 
 const renderItem = (user) =>{
     const rowElement = document.createElement("tr");
-    rowElement.classList.add("users-list-row");
+    // rowElement.classList.add("users-list-row");
 
     usersTableRowsList.innerHTML = `
     <tbody>
