@@ -54,7 +54,7 @@ html {
     padding-top: 16px;
     margin-bottom: 32px;
     background:  #010208d0 16.39%;
-    z-index: 100;
+    z-index: 10;
 }
 
 .header-wrapper { 

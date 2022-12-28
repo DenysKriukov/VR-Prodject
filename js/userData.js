@@ -1,12 +1,13 @@
 import { USERS } from "../mocks/users.js"
 
-const usersTableRowsList = document.querySelector(".users-list-class");
+const usersDataList = document.querySelector(".users-list-class");
+const usersFilterRoleSelect = document.querySelector(".btnSelect");
 
 const renderItem = (user) =>{
     const rowElement = document.createElement("tr");
     // rowElement.classList.add("users-list-row");
 
-    usersTableRowsList.innerHTML = `
+    usersDataList.innerHTML = `
     <tbody>
         <tr>
             <th>Avatar</th>
@@ -58,4 +59,42 @@ const renderList = (element, list) =>{
     element.appendChild(completeBodyElement);
 }
 
-renderList(usersTableRowsList, USERS,);
+renderList(usersDataList, USERS,);
+
+
+
+//default users order:
+const handleBtnReset = () =>{
+    resetButton.style.display = "none";
+    selectId.value = "default";
+    
+    renderList(usersDataList, initialUsers);
+}
+
+// sort
+
+const handleRoleSelect = (e) =>{
+    const sortRole = e.target.value;
+    let sortedUsers = null;
+    
+    switch (sortRole) {
+        case "admin": 
+            resetButton.style.display = "block";
+            sortedUsers = USERS.sort((a) => a.role === "admin" ?  -1 : 0);
+            break;
+        case "moderator":
+            resetButton.style.display = "block";
+            sortedUsers = USERS.sort((a) => a.role === "moderator" ?  -1 : 0);
+            break;
+        case "user":
+            resetButton.style.display = "block";
+            sortedUsers = USERS.sort((a) => a.role === "user" ?  -1 : 0);
+            break;
+    }
+    
+    renderList(usersDataList, sortedUsers);
+}
+
+usersFilterRoleSelect.addEventListener("change", handleRoleSelect);
+
+dialogRoleShow ();
