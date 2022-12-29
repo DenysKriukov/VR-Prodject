@@ -7,7 +7,6 @@ const renderItem = (benefit) =>{
     divElement.classList.add("company-values-benefits");
     divElement.style.display = "flex";
     divElement.style.flexDirection = "column";
-    divElement.style.textAlign = "center";
     divElement.style.width = "110px";
 
     divElement.innerHTML = `
@@ -28,7 +27,7 @@ const renderList = (element, list) =>{
         divElement.appendChild(renderItem(item));
         divElement.style.display = "flex";
         divElement.style.flexWrap = "wrap";
-        divElement.style.justifyContent = "space-between";
+        divElement.style.justifyContent = "center";divElement.style.alignItems = " flex-end";
         divElement.style.width = "234px";
         divElement.style.gap = "9px";
         

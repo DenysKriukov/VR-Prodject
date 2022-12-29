@@ -193,7 +193,12 @@ html {
     line-height: 24px;
     border: none;
     background-color: transparent;
+    cursor: pointer;
     color: #fff;
+}
+
+.hero-btnExplore:hover {
+    color: rgba(177, 43, 226, 0.808);
 }
 
 .hero-people {
@@ -505,6 +510,10 @@ html {
     align-items: center;
     padding: 0px;
     gap: 8px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 9px;
+    line-height: 11px;
     /* max-width: 184px; */
 }
 
