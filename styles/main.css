@@ -374,10 +374,10 @@ html {
     max-width: 535px;
 }
 
-.clients-say-comments {
+.clients-say-comment {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     padding: 0px;
     gap: 16px;

@@ -25,6 +25,7 @@ const renderItem = (comment) =>{
 
 const renderList = (element, list, className) =>{
     const divElement = document.createElement("div");
+    divElement.classList.add("clients-say-comment");
 
     const completeDivElement = list.reduce((divElement, item) =>{
         divElement.appendChild(renderItem(item));
@@ -36,4 +37,4 @@ const renderList = (element, list, className) =>{
     element.appendChild(completeDivElement);
 }
 
-renderList(commentsList, COMMENTS, "clients-say-comments");
+renderList(commentsList, COMMENTS, "clients-say-comment");

@@ -51,10 +51,63 @@
         overflow-y: hidden;
         align-items: flex-start;
     }
-    /* .authorization.open,
-    .newGame.open {
-        width: 592px;
-    } */
+
+
+
+    .clients-say-comment{
+        width: 100%;
+        max-width: 290px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 15px;
+        /* align-items: flex-start; */
+    }
+    .clients-say-comments-list {
+        width: 282px;
+      }
+    
+
+
+
+
+
+      ::-webkit-scrollbar {
+        width: 12px;
+        height: 6px;
+        background: #c993d4;
+        border-radius: 4px;
+      }
+    
+      ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 1px rgba(13, 242, 181, 0.402);
+        background: rgb(247, 3, 202);
+      }
+    
+
+
+
+
+
+
+
+      .comments__stars-item {
+        width: 100%;
+        min-width: 282px;
+        gap: 8px;
+      }
+    
+      .comments__stars-item-names {
+        gap: 6px;
+      }
+    
+      .comments__stars-item-names div {
+        font-weight: 500;
+        font-size: 7px;
+        line-height: 10px;
+        gap: 2px;
+      }
+
 }
 
 @media (max-width: 720px) {
