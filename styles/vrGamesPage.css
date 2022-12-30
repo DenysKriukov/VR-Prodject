@@ -220,6 +220,9 @@ body {
     max-width: 100%;
     width: 290px;
     height: 200px;
+    /* background-size: cover; */
+    /* background-repeat: repeat; */
+    background-position: center;
 }
 
 /* .game-card:hover {
