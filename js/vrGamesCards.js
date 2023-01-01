@@ -1,18 +1,11 @@
-import { CARDS } from '../mocks/cards';
+import { CARDS } from "../mocks/cards.js"
 
-// const initialCards = [...CARDS];
 const cardsList = document.querySelector(".games-section");
-// const filterSearchBoxView = document.querySelector(".filter__search-box-view");
-// const resetButton = document.querySelector(".reset-button");
-// const selectId = document.getElementById("select");
-
 
 //render cards:
 
 const renderItem = (card) =>{
     const liElement = document.createElement("li");
-    // liElement.classList.add("game-card");
-    // liElement.setAttribute("id", card.id);
 
     liElement.innerHTML = `
         <img class="game-img" src="../assets/img/games/${card.img}.png" alt=${card.alt}

@@ -9,7 +9,7 @@ export const CARDS =[{
     userReview: "111111",
 },
 {
-    id: "0",
+    id: "1",
     img: "metro",
     alt: "Metro",
     gameName: "USA",
@@ -17,7 +17,7 @@ export const CARDS =[{
     userName: "perry@gmail.com",
     userReview: "111111",
 },{
-    id: "0",
+    id: "2",
     img: "metro",
     alt: "Metro",
     gameName: "USA",
