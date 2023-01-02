@@ -107,4 +107,22 @@ export const CARDS =[{
     userName: "Mary Perry",
     userReview: "Cool game!",
 },
+{
+    id: "12",
+    img: "assassinsCreed",
+    alt: "assassins creed",
+    gameName: "Assassins Creed",
+    gameDescription: "Assassins Creed",
+    userName: "Elena Zelenska",
+    userReview: "The great game!",
+},
+{
+    id: "13",
+    img: "rage",
+    alt: "rage",
+    gameName: "RAGE",
+    gameDescription: "RAGE",
+    userName: "Mary Perry",
+    userReview: "Cool game!",
+},
 ]

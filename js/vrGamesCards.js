@@ -33,7 +33,7 @@ const renderList = (element, list, className) => {
       
     
 
-    const completeDivElement = list.reduce((divElement, item) =>{
+    const completeDivElement = list.slice(0,12).reduce((divElement, item) =>{
         divElement.appendChild(renderItem(item));
         divElement.classList.add(className);
 
