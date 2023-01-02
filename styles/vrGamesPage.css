@@ -232,6 +232,7 @@ body {
     box-sizing: border-box;
     position: absolute;
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
     align-items: center;
     padding: 6px 8px;
@@ -243,7 +244,7 @@ body {
     font-weight: 600;
     font-size: 12px;
     line-height: 18px;
-    text-decoration-line: underline;
+    /* text-decoration-line: underline; */
 }
 
 .card-wrap-text-left {
