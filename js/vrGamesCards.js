@@ -18,8 +18,8 @@ const renderItem = (card) =>{
                 <p class="game-description">${card.gameDescription}</p>
             </div> 
             <diw class="card-wrap-text-right">
-                <h4 class="user-name">${card.userName}</h4>
-                <p class="user-review">${card.userReview}</p>
+                <h4 class="user-name">${card.user.userName}</h4>
+                <p class="user-review">${card.user.userReview}</p>
             </diw>
         </div>
     </li>

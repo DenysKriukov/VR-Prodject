@@ -5,8 +5,12 @@ export const CARDS =[{
     alt: "wolfenstein creed",
     gameName: "Wolfenstein",
     gameDescription: "Youngblood",
-    userName: "Mary Perry",
-    userReview: "Cool game!",
+    user: {
+        id: "0",
+        userName: "Mary Perry",
+        userReview: "Cool game!",
+    },
+    date: new Date('2020-10-15'),
 },
 {
     id: "1",
@@ -14,8 +18,12 @@ export const CARDS =[{
     alt: "battlefield",
     gameName: "Battlefield",
     gameDescription: "Battlefield 1942",
-    userName: "Taro Yamada",
-    userReview: "Awesome!",
+    user: {
+        id: "1",
+        userName: "Taro Yamada",
+        userReview: "Awesome!",
+    },
+    date: new Date('2020-11-12'),
 },
 {
     id: "2",
@@ -23,8 +31,12 @@ export const CARDS =[{
     alt: "borderlands",
     gameName: "Borderlands",
     gameDescription: "borderlands",
-    userName: "Jade Bernard",
-    userReview: "Great!",
+    user: {
+        id: "2",
+        userName: "Jade Bernard",
+        userReview: "Great!",
+    },
+    date: new Date('2019-10-15'),
 },
 {
     id: "3",
@@ -32,8 +44,12 @@ export const CARDS =[{
     alt: "crysis 3",
     gameName: "Crysis 3",
     gameDescription: "Crysis 3",
-    userName: "Lin Zhu",
-    userReview: "Cool!",
+    user: {
+        id: "3",
+        userName: "Lin Zhu",
+        userReview: "Cool!",
+    },
+    date: new Date('2021-10-22'),
 },
 {
     id: "4",
@@ -41,8 +57,12 @@ export const CARDS =[{
     alt: "dead space",
     gameName: "Dead Space",
     gameDescription: "Dead Space",
-    userName: "Elena Zelenska",
-    userReview: "The great game!",
+    user: {
+        id: "4",
+        userName: "Elena Zelenska",
+        userReview: "The great game!",
+    },
+    date: new Date('2021-05-21'),
 },
 {
     id: "5",
@@ -50,8 +70,12 @@ export const CARDS =[{
     alt: "dragon age",
     gameName: "Dragon Age",
     gameDescription: "Awakening",
-    userName: "Martha Doych",
-    userReview: "Super!",
+    user: {
+        id: "5",
+        userName: "Martha Doych",
+        userReview: "Super!",
+    },
+    date: new Date('2020-09-01'),
 },
 {
     id: "6",
@@ -59,8 +83,12 @@ export const CARDS =[{
     alt: "far cry",
     gameName: "Far Cry",
     gameDescription: "Primal",
-    userName: "Ivanka Dydek",
-    userReview: "Awesome!",
+    user: {
+        id: "6",
+        userName: "Ivanka Dydek",
+        userReview: "Awesome!",
+    },
+    date: new Date('2021-09-11'),
 },
 {
     id: "7",
@@ -68,8 +96,12 @@ export const CARDS =[{
     alt: "fifa20",
     gameName: "FIFA 20",
     gameDescription: "FIFA 20",
-    userName: "Taro Yamada",
-    userReview: "Cool game!",
+    user: {
+        id: "1",
+        userName: "Taro Yamada",
+        userReview: "Cool game!",
+    },
+    date: new Date('2022-10-12'),
 },
 {
     id: "8",
@@ -77,8 +109,12 @@ export const CARDS =[{
     alt: "mass effect",
     gameName: "Mass",
     gameDescription: "Effect",
-    userName: "Jade Bernard",
-    userReview: "Super!",
+    user: {
+        id: "2",
+        userName: "Jade Bernard",
+        userReview: "Super!",
+    },
+    date: new Date('2021-08-15'),
 },
 {
     id: "9",
@@ -86,8 +122,12 @@ export const CARDS =[{
     alt: "max payne 2",
     gameName: "Max Payne 2",
     gameDescription: "The Fall of Max Payne",
-    userName: "Lin Zhu",
-    userReview: "Great!",
+    user: {
+        id: "3",
+        userName: "Lin Zhu",
+        userReview: "Great!",
+    },
+    date: new Date('2022-05-12'),
 },
 {
     id: "10",
@@ -95,8 +135,12 @@ export const CARDS =[{
     alt: "Metro",
     gameName: "Metro",
     gameDescription: "Exodus",
-    userName: "Elena Zelenska",
-    userReview: "The great game!",
+    user: {
+        id: "4",
+        userName: "Elena Zelenska",
+        userReview: "The great game!",
+    },
+    date: new Date('2022-07-19'),
 },
 {
     id: "11",
@@ -104,8 +148,12 @@ export const CARDS =[{
     alt: "WRC 5",
     gameName: "WRC 5",
     gameDescription: "Esports Pack 1",
-    userName: "Mary Perry",
-    userReview: "Cool game!",
+    user: {
+        id: "0",
+        userName: "Mary Perry",
+        userReview: "Cool game!",
+    },
+    date: new Date('2020-02-15'),
 },
 {
     id: "12",
@@ -113,8 +161,12 @@ export const CARDS =[{
     alt: "assassins creed",
     gameName: "Assassins Creed",
     gameDescription: "Assassins Creed",
-    userName: "Elena Zelenska",
-    userReview: "The great game!",
+    user: {
+        id: "4",
+        userName: "Elena Zelenska",
+        userReview: "The great game!",
+    },
+    date: new Date('2022-07-15'),
 },
 {
     id: "13",
@@ -122,7 +174,11 @@ export const CARDS =[{
     alt: "rage",
     gameName: "RAGE",
     gameDescription: "RAGE",
-    userName: "Mary Perry",
-    userReview: "Cool game!",
+    user: {
+        id: "0",
+        userName: "Mary Perry",
+        userReview: "Cool game!",
+    },
+    date: new Date('2022-06-15'),
 },
 ]
