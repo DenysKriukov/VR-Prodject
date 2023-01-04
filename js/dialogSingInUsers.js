@@ -9,8 +9,8 @@ const headerNavBtn = document.querySelector(".nav-btnSign-in");
 const overlay = document.querySelector(".overlay");
 const logOutBtn = document.querySelector(".log-out-btn");
 const userMenu = document.querySelector(".authed-header-menu-wrap");
-const signInEmail = document.getElementById("modal-SignIn");
-const signInPassword = document.getElementById("modal-password");
+const signInEmail = document.getElementById("sign-in-email");
+const signInPassword = document.getElementById("sign-in-password");
 const paginationList = document.querySelector(".pagination");
 const contentEmptyGames = document.querySelector(".empty-games-wrap");
 const gamesHeader = document.querySelector(".games-header");
@@ -19,7 +19,7 @@ const signInButton = document.querySelector(".nav-btnSign-in");
 const headerNavBtnMobileLogOut = document.querySelector(".header-nav-btn-mobile-log-out");
 
 // switch empty games to gamesHeader and pagination
-const checkEmptyGames = (user) =>{
+const checkEmptyGames = () =>{
     const loggedUser = JSON.parse(localStorage.getItem("user"));
     const gamesInLocalStorage = JSON.parse(localStorage.getItem("cards"));
 
@@ -67,8 +67,8 @@ const checkInputPassword = () =>{
 }
 
 const isUserSignIn = () =>{
-    const email = document.getElementById("modal-SignIn").value;
-    const password = document.getElementById("modal-password").value;
+    const email = document.getElementById("sign-in-email").value;
+    const password = document.getElementById("sign-in-password").value;
     const user = USERS.find((user) => user.email === email && user.password === password);
 
     if(user){
