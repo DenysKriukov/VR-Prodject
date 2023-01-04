@@ -145,6 +145,113 @@ html {
 }
 
 
+  /* authed header */
+
+  .authed-header {
+    display: none;
+  }
+  
+  .authed-header-menu-wrap {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    padding-top: 34px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    width: 100%;
+    max-width: 135px;
+    top: 100px;
+    right:140px;
+    gap: 4px;
+    background: #000000;
+    border: 1px solid #bc3cd8;
+    border-radius: 6px;
+  }
+  
+  .authed-header-arrow {
+    position: absolute;
+    display: block;
+    top: 10%;
+    right: 10%;
+    background: rgba(14, 14, 14, 1);
+    height: 5px;
+    width: 5px;
+    /* border: px solid; */
+    pointer-events: none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #bc3cd8;
+  }
+  
+  .authed-header-btn {
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+  }
+  
+  .authed-header-btn-img {
+    width: 32px;
+  }
+  
+  .authed-header-menu-wrap button {
+    text-decoration: none;
+    padding: 0;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.022em;
+    color: #f2f2f2;
+    background: transparent;
+    border-color: transparent;
+  }
+  
+  .authed-header-menu-wrap button:hover {
+    font-weight: 800;
+    cursor: pointer;
+  }
+  
+  .authed-header-menu-wrap p {
+    display: flex;
+    align-items: flex-start;
+    transition: transform 0.5s;
+  }
+  
+  .authed-header-menu-wrap p:hover {
+    transform: translateX(5px);
+  }
+  
+  .authed-header-menu-wrap a {
+    display: flex;
+    align-items: flex-start;
+    color: #f2f2f2;
+    transition: transform 0.5s;
+  }
+  
+  .authed-header-menu-wrap a:hover {
+    transform: translateX(5px);
+  }
+
+  .hidden {
+    display: none;
+  }
+  
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 50;
+  }
+
 /* -------------------------hero---------------------- */
 
 .hero {
@@ -647,6 +754,9 @@ html {
     gap: 10px;
 }
 
+.hidden {
+    display: none;
+  }
 /* .header-nav-btn-mobile-log-out {
     display: none;
 }
@@ -666,109 +776,5 @@ html {
     cursor: pointer;
   } */
 
-  /* authed header */
-
-.authed-header {
-    display: none;
-  }
   
-  .authed-header-menu-wrap {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 150%;
-    padding-top: 34px;
-    padding-bottom: 16px;
-    padding-left: 16px;
-    width: 100%;
-    max-width: 135px;
-    top: 100px;
-    right:140px;
-    gap: 4px;
-    background: #000000;
-    border: 1px solid #bc3cd8;
-    border-radius: 6px;
-  }
   
-  .authed-header-arrow {
-    position: absolute;
-    display: block;
-    top: 10%;
-    right: 10%;
-    background: rgba(14, 14, 14, 1);
-    height: 5px;
-    width: 5px;
-    /* border: px solid; */
-    pointer-events: none;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid #bc3cd8;
-  }
-  
-  .authed-header-btn {
-    background: transparent;
-    border-color: transparent;
-    cursor: pointer;
-  }
-  
-  .authed-header-btn-img {
-    width: 32px;
-  }
-  
-  .authed-header-menu-wrap button {
-    text-decoration: none;
-    padding: 0;
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 0.022em;
-    color: #f2f2f2;
-    background: transparent;
-    border-color: transparent;
-  }
-  
-  .authed-header-menu-wrap button:hover {
-    font-weight: 800;
-    cursor: pointer;
-  }
-  
-  .authed-header-menu-wrap p {
-    display: flex;
-    align-items: flex-start;
-    transition: transform 0.5s;
-  }
-  
-  .authed-header-menu-wrap p:hover {
-    transform: translateX(5px);
-  }
-  
-  .authed-header-menu-wrap a {
-    display: flex;
-    align-items: flex-start;
-    color: #f2f2f2;
-    transition: transform 0.5s;
-  }
-  
-  .authed-header-menu-wrap a:hover {
-    transform: translateX(5px);
-  }
-
-  .hidden {
-    display: none;
-  }
-  
-  .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    z-index: 50;
-  }

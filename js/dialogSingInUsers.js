@@ -48,16 +48,16 @@ const changeHeader = () =>{
         signInButton.style.display = "none"; 
         overlay.classList.remove('open');
         auth.classList.remove('open'); 
-        scrollController.enabledScroll();        
+       
     }
     else{
         // headerNavBtnMobileLogOut.classList.add("hidden");
         authedHeader.style.display = "none";
         headerNavBtn.style.display = "flex"; 
         signInButton.style.display = "flex"; 
-        overlay.classList.add('open');
-        auth.classList.add('open');
-        scrollController.disabledScroll();
+        // overlay.classList.add('open');
+        // auth.classList.add('open');
+       
     }
 }
 
@@ -108,11 +108,11 @@ logOutBtn.addEventListener("click", handleLogOut);
 
 const handleHeaderNavBtnMobileLogOut = () =>{
     localStorage.setItem("user", null);
-    headerNavBtnMobileLogOut.classList.add("hidden");
+    logOutBtn.classList.add("hidden");
     headerNavBtnMobile.style.display = "flex"; 
 }
 
-headerNavBtnMobileLogOut.addEventListener("click", handleHeaderNavBtnMobileLogOut);
+logOutBtn.addEventListener("click", handleHeaderNavBtnMobileLogOut);
 
 window.addEventListener("DOMContentLoaded", () =>{
     changeHeader();

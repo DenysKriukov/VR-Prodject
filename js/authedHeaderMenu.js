@@ -5,7 +5,7 @@ const authedHeaderMenuArrow = document.querySelector(".authed-header-arrow");
 
 const dialogAuthedHeader = () =>{  
     authedHeaderBtn.style.width = "44px"
-    authedHeaderBtn.style.marginLeft = "-40px"
+    // authedHeaderBtn.style.marginLeft = "-40px"
     authedHeaderMenuWrap.style.zIndex = "100";
     authedHeaderMenuArrow.style.zIndex = "200";
     background.style.zIndex = "99";    

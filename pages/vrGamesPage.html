@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/vrGamesPage.css">
     <link rel="stylesheet" href="../styles/reset.css">
+    <!-- <link rel="stylesheet" href="../styles/main.css"> -->
     <link rel="stylesheet" href="../styles/media.css">
     <link rel="stylesheet" href="../styles/singInDialog.css">
     <link rel="stylesheet" href="../styles/addGameDialog.css">
@@ -38,7 +39,22 @@
                             <li class="nav-item">
                                 <a href="./usersPage.html" class="nav-link-users">Users</a></li>
                         </ul>
-                        <button class="nav-btnSign-in" type="submit" href="./singInDialog.html">Sign in</button>
+                        <div class="header-menu-wrap ">
+                            <button class="nav-btnSign-in" type="submit">Sign in</button>
+                            <div class="authed-header">
+                                <button class="authed-header-btn">
+                                  <img class="authed-header-btn-img"
+                                  src="../assets/img/heroPeople1avatar.png"
+                                  alt="user-icon"/>
+                                </button>
+                                  <div class="backdrop hidden"></div>
+                                  <div class="authed-header-menu-wrap hidden">
+                                    <button class="authed-header-menu-btn"><a href="#" target="_blank">My Profile</a></button>
+                                    <button class="authed-header-menu-btn log-out-btn"><p>Log Out</p></button>
+                                    <div class="authed-header-arrow"></div>
+                                </div>
+                              </div>
+                        </div>
                     </nav>
                      <button class="nav-button-burger">
                         <img width="35px" height="25px" src="../assets/icons/iconBurgerMenu.svg" alt="btn burger">
@@ -72,7 +88,7 @@
                     <select class="btnSelect">
                         <option value="default" class="btnSelectSort" >Sort By Date</option>
                         <option value="new-first" class="filter__search-option">New first</option>
-                        <option value="new-second" class="filter__search-option">New second</option>
+                        <option value="new-second" class="filter__search-option">New last</option>
                     </select>
                 </div>
             </div>
@@ -159,6 +175,8 @@
     <script src="../js/btnBurger.js"></script>
     <script src="../js/game.js"></script>
     <script src="../js/signIn.js"></script>
+    <script src="../js/authedHeaderMenu.js"></script>
+    <script type="module" src="../js/dialogSingInUsers.js"></script>
     <script src="../js/addNewGame.js"></script>
     <script src="../js/emailForm.js"></script>
     <!-- <script src="../mocks/cards.js"></script>  -->
