@@ -70,8 +70,9 @@
                 <div class="games-header-controll">
                     <button class="btnAdd btn">Add New Game</button>
                     <select class="btnSelect">
-                        <option class="btnSelectSort" >Sort By Date</option>
-                        <option class="btnSelectSort" >Sort By Role</option>
+                        <option value="default" class="btnSelectSort" >Sort By Date</option>
+                        <option value="new-first" class="filter__search-option">New first</option>
+                        <option value="new-second" class="filter__search-option">New second</option>
                     </select>
                 </div>
             </div>
@@ -117,165 +118,7 @@
 
     <section>
         <div class="container">
-            <ul class="games-section">
-                <!-- <li class="game-card" data-aos="flip-right"> -->
-                    <!-- <div class="games-section-cards"> -->
-                    <!-- <img class="game-img" src="../assets/img/games/metro.png" alt="Metro">
-                    <div class="card-wrap-text">
-                        <div class="card-wrap-text-left">
-                            <h4 class="game-name">${gameName}</h4>
-                            <p class="game-description">${gameDescription}</p>
-                        </div> 
-                        <diw class="card-wrap-text-right">
-                            <h4 class="user-name">${userName}</h4>
-                            <p class="user-review">${userReview}</p>
-                        </diw>
-                    </div>
-                </li>
-                <li class="game-card" data-aos="flip-right">
-                    <img class="game-img" src="../assets/img/articlesPlayingMan.png" alt="Playing Man">
-                    <div class="card-wrap-text">
-                        <div class="card-wrap-text-left">
-                            <h4>${gameName}</h4>
-                            <p>${gameDescription}</p>
-                        </div> 
-                        <diw class="card-wrap-text-right">
-                            <h4>${userName}</h4>
-                            <p>${userReview}</p>
-                        </diw>
-                    </div>
-                </li>               
-                <li class="game-card" data-aos="flip-right">
-                    <img class="game-img" src="../assets/img/articlesPlayingMan.png" alt="Playing Man">
-                    <div class="card-wrap-text">
-                        <div class="card-wrap-text-left">
-                            <h4>${gameName}</h4>
-                            <p>${gameDescription}</p>
-                        </div> 
-                        <diw class="card-wrap-text-right">
-                            <h4>${userName}</h4>
-                            <p>${userReview}</p>
-                        </diw>
-                    </div>
-                </li>                
-                <li class="game-card" data-aos="flip-right">
-                    <img class="game-img" src="../assets/img/articlesPlayingMan.png" alt="Playing Man">
-                    <div class="card-wrap-text">
-                        <div class="card-wrap-text-left">
-                            <h4>${gameName}</h4>
-                            <p>${gameDescription}</p>
-                        </div> 
-                        <diw class="card-wrap-text-right">
-                            <h4>${userName}</h4>
-                            <p>${userReview}</p>
-                        </diw>
-                    </div>
-                </li>                
-                <li class="game-card" data-aos="flip-right">
-                    <img class="game-img" src="../assets/img/articlesPlayingMan.png" alt="Playing Man">
-                    <div class="card-wrap-text">
-                        <div class="card-wrap-text-left">
-                            <h4>${gameName}</h4>
-                            <p>${gameDescription}</p>
-                        </div> 
-                        <diw class="card-wrap-text-right">
-                            <h4>${userName}</h4>
-                            <p>${userReview}</p>
-                        </diw>
-                    </div>
-                </li>                
-                <li class="game-card" data-aos="flip-right">
-                    <img class="game-img" src="../assets/img/articlesPlayingMan.png" alt="Playing Man">
-                    <div class="card-wrap-text">
-                        <div class="card-wrap-text-left">
-                            <h4>${gameName}</h4>
-                            <p>${gameDescription}</p>
-                        </div> 
-                        <diw class="card-wrap-text-right">
-                            <h4>${userName}</h4>
-                            <p>${userReview}</p>
-                        </diw>
-                    </div>
-                </li>                
-                <li class="game-card" data-aos="flip-right">
-                    <img class="game-img" src="../assets/img/articlesPlayingMan.png" alt="Playing Man">
-                    <div class="card-wrap-text">
-                        <div class="card-wrap-text-left">
-                            <h4>${gameName}</h4>
-                            <p>${gameDescription}</p>
-                        </div> 
-                        <diw class="card-wrap-text-right">
-                            <h4>${userName}</h4>
-                            <p>${userReview}</p>
-                        </diw>
-                    </div>
-                </li>                
-                <li class="game-card" data-aos="flip-right">
-                    <img class="game-img" src="../assets/img/articlesPlayingMan.png" alt="Playing Man">
-                    <div class="card-wrap-text">
-                        <div class="card-wrap-text-left">
-                            <h4>${gameName}</h4>
-                            <p>${gameDescription}</p>
-                        </div> 
-                        <diw class="card-wrap-text-right">
-                            <h4>${userName}</h4>
-                            <p>${userReview}</p>
-                        </diw>
-                    </div>
-                </li>                
-                <li class="game-card" data-aos="flip-right">
-                    <img class="game-img" src="../assets/img/articlesPlayingMan.png" alt="Playing Man">
-                    <div class="card-wrap-text">
-                        <div class="card-wrap-text-left">
-                            <h4>${gameName}</h4>
-                            <p>${gameDescription}</p>
-                        </div> 
-                        <diw class="card-wrap-text-right">
-                            <h4>${userName}</h4>
-                            <p>${userReview}</p>
-                        </diw>
-                    </div>
-                </li>                
-                <li class="game-card" data-aos="flip-right">
-                    <img class="game-img" src="../assets/img/articlesPlayingMan.png" alt="Playing Man">
-                    <div class="card-wrap-text">
-                        <div class="card-wrap-text-left">
-                            <h4>${gameName}</h4>
-                            <p>${gameDescription}</p>
-                        </div> 
-                        <diw class="card-wrap-text-right">
-                            <h4>${userName}</h4>
-                            <p>${userReview}</p>
-                        </diw>
-                    </div>
-                </li>                
-                <li class="game-card" data-aos="flip-right">
-                    <img class="game-img" src="../assets/img/articlesPlayingMan.png" alt="Playing Man">
-                    <div class="card-wrap-text">
-                        <div class="card-wrap-text-left">
-                            <h4>${gameName}</h4>
-                            <p>${gameDescription}</p>
-                        </div> 
-                        <diw class="card-wrap-text-right">
-                            <h4>${userName}</h4>
-                            <p>${userReview}</p>
-                        </diw>
-                    </div>
-                </li>                
-                <li class="game-card" data-aos="flip-right">
-                    <img class="game-img" src="../assets/img/articlesPlayingMan.png" alt="Playing Man">
-                    <div class="card-wrap-text">
-                        <div class="card-wrap-text-left">
-                            <h4>${gameName}</h4>
-                            <p>${gameDescription}</p>
-                        </div> 
-                        <diw class="card-wrap-text-right">
-                            <h4>${userName}</h4>
-                            <p>${userReview}</p>
-                        </diw>
-                    </div>
-                </li> -->
-            </ul>       
+            <ul class="games-section"></ul>       
         </div>           
     </section>
 

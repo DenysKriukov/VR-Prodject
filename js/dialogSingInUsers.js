@@ -1,0 +1,114 @@
+import { USERS } from "../mocks/users.js"
+
+
+const elementBody = document.querySelector("body");
+const auth = document.querySelector(".authorization");
+const signInFormBtn = document.querySelector(".modal-SignIn");
+const authedHeader = document.querySelector(".authed-header");
+const headerNavBtn = document.querySelector(".nav-btnSign-in");
+const overlay = document.querySelector(".overlay");
+const logOutBtn = document.querySelector(".log-out-btn");
+const userMenu = document.querySelector(".authed-header-menu-wrap");
+const signInEmail = document.getElementById("modal-SignIn");
+const signInPassword = document.getElementById("modal-password");
+const paginationList = document.querySelector(".pagination");
+const contentEmptyGames = document.querySelector(".empty-games-wrap");
+const gamesHeader = document.querySelector(".games-header");
+const contentGamesSection = document.querySelector(".games-section");
+const signInButton = document.querySelector(".nav-btnSign-in");
+const headerNavBtnMobileLogOut = document.querySelector(".header-nav-btn-mobile-log-out");
+
+// switch empty games to gamesHeader and pagination
+const checkEmptyGames = (user) =>{
+    const loggedUser = JSON.parse(localStorage.getItem("user"));
+    const gamesInLocalStorage = JSON.parse(localStorage.getItem("cards"));
+
+    if(loggedUser != null){
+        paginationList.style.display = "flex";
+        contentEmptyGames.style.display = "none";
+        gamesHeader.style.display = "block";
+        contentGamesSection.style.display = "flex";
+    }
+
+    if(!loggedUser || loggedUser === null && gamesInLocalStorage != null){
+        // paginationList.style.display = "none";
+        // contentEmptyGames.style.display = "flex";
+        // gamesHeader.style.display = "none";
+        // contentGamesSection.style.display = "none";
+    } 
+}
+
+const changeHeader = () =>{
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    if(user){
+        headerNavBtnMobileLogOut.classList.remove("hidden");
+        authedHeader.style.display = "flex";
+        headerNavBtn.style.display = "none";          
+        signInButton.style.display = "none";          
+    }
+    else{
+        headerNavBtnMobileLogOut.classList.add("hidden");
+        authedHeader.style.display = "none";
+        headerNavBtn.style.display = "flex"; 
+        signInButton.style.display = "flex"; 
+    }
+}
+
+const resetInputsField = () =>{
+    signInEmail.value = "";
+    signInPassword.value="";
+}
+
+const checkInputPassword = () =>{
+    if(signInPassword.value.length < 6){
+        alert("password is requiered minimum 6 symbols");
+    }
+}
+
+const isUserSignIn = () =>{
+    const email = document.getElementById("modal-SignIn").value;
+    const password = document.getElementById("modal-password").value;
+    const user = USERS.find((user) => user.email === email && user.password === password);
+
+    if(user){
+        localStorage.setItem("user", JSON.stringify(user));
+        elementBody.style.overflow = "";
+        auth.classList.add("hidden");
+        overlay.classList.add("hidden");
+        resetInputsField();
+        changeHeader();
+    }else{
+        alert("invalid email or password");
+        checkInputPassword();
+    }
+}
+
+const handleSignInFormBtn = () =>{
+    isUserSignIn();
+    checkEmptyGames();
+}
+
+signInFormBtn.addEventListener("click", handleSignInFormBtn);
+
+const handleLogOut = () =>{
+    userMenu.classList.add("hidden");
+    localStorage.setItem("user", null);
+    changeHeader();
+    checkEmptyGames();
+}
+
+logOutBtn.addEventListener("click", handleLogOut);
+
+const handleHeaderNavBtnMobileLogOut = () =>{
+    localStorage.setItem("user", null);
+    headerNavBtnMobileLogOut.classList.add("hidden");
+    headerNavBtnMobile.style.display = "flex"; 
+}
+
+headerNavBtnMobileLogOut.addEventListener("click", handleHeaderNavBtnMobileLogOut);
+
+window.addEventListener("DOMContentLoaded", () =>{
+    changeHeader();
+    checkEmptyGames();
+});

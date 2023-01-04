@@ -2,9 +2,7 @@ const authedHeaderBtn = document.querySelector(".authed-header-btn");
 const authedHeaderMenuWrap = document.querySelector(".header-menu-wrap");
 const background = document.querySelector(".backdrop");
 
-const dialogAuthedHeader = () =>{
-    authedHeaderMenuWrap.style.boxShadow = "0px 0px 10px #bc3cd8";    
-    authedHeaderMenuWrap.style.right = "10px";    
+const dialogAuthedHeader = () =>{    
     authedHeaderMenuWrap.style.zIndex = "100";    
 }
 

@@ -652,7 +652,7 @@ html {
 }
 
 .header-nav-btn-mobile-log-out {
-    /* display: flex; */
+    display: flex;
     padding: 10px 28px;
     font-family: "Poppins";
     font-style: normal;

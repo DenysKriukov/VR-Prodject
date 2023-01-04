@@ -1,4 +1,5 @@
 export const USERS =[{
+    
     id: "0",
     img: "heroPeople1avatar",
     name: "Mary Perry",
@@ -49,7 +50,7 @@ export const USERS =[{
     name: "Martha Doych",
     country: "Germany",
     age: "26",
-    email: "TommyGool@mail.com",
+    email: "Doych@gmail.com",
     password: "111111",
     role: "moderator",
 },
