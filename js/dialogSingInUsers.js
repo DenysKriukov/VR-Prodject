@@ -19,39 +19,45 @@ const signInButton = document.querySelector(".nav-btnSign-in");
 const headerNavBtnMobileLogOut = document.querySelector(".header-nav-btn-mobile-log-out");
 
 // switch empty games to gamesHeader and pagination
-const checkEmptyGames = () =>{
-    const loggedUser = JSON.parse(localStorage.getItem("user"));
-    const gamesInLocalStorage = JSON.parse(localStorage.getItem("cards"));
+// const checkEmptyGames = () =>{
+//     const loggedUser = JSON.parse(localStorage.getItem("user"));
+//     const gamesInLocalStorage = JSON.parse(localStorage.getItem("cards"));
 
-    if(loggedUser != null){
-        paginationList.style.display = "flex";
-        contentEmptyGames.style.display = "none";
-        gamesHeader.style.display = "block";
-        contentGamesSection.style.display = "flex";
-    }
+//     if(loggedUser != null){
+//         paginationList.style.display = "flex";
+//         contentEmptyGames.style.display = "none";
+//         gamesHeader.style.display = "block";
+//         contentGamesSection.style.display = "flex";
+//     }
 
-    if(!loggedUser || loggedUser === null && gamesInLocalStorage != null){
-        // paginationList.style.display = "none";
-        // contentEmptyGames.style.display = "flex";
-        // gamesHeader.style.display = "none";
-        // contentGamesSection.style.display = "none";
-    } 
-}
+//     if(!loggedUser || loggedUser === null && gamesInLocalStorage != null){
+//         paginationList.style.display = "none";
+//         contentEmptyGames.style.display = "flex";
+//         gamesHeader.style.display = "none";
+//         contentGamesSection.style.display = "none";
+//     } 
+// }
 
 const changeHeader = () =>{
     const user = JSON.parse(localStorage.getItem("user"));
 
     if(user){
-        headerNavBtnMobileLogOut.classList.remove("hidden");
+        // headerNavBtnMobileLogOut.classList.remove("hidden");
         authedHeader.style.display = "flex";
         headerNavBtn.style.display = "none";          
-        signInButton.style.display = "none";          
+        signInButton.style.display = "none"; 
+        overlay.classList.remove('open');
+        auth.classList.remove('open'); 
+        scrollController.enabledScroll();        
     }
     else{
-        headerNavBtnMobileLogOut.classList.add("hidden");
+        // headerNavBtnMobileLogOut.classList.add("hidden");
         authedHeader.style.display = "none";
         headerNavBtn.style.display = "flex"; 
         signInButton.style.display = "flex"; 
+        overlay.classList.add('open');
+        auth.classList.add('open');
+        scrollController.disabledScroll();
     }
 }
 
