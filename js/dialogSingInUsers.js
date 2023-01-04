@@ -11,12 +11,11 @@ const logOutBtn = document.querySelector(".log-out-btn");
 const userMenu = document.querySelector(".authed-header-menu-wrap");
 const signInEmail = document.getElementById("sign-in-email");
 const signInPassword = document.getElementById("sign-in-password");
-const paginationList = document.querySelector(".pagination");
-const contentEmptyGames = document.querySelector(".empty-games-wrap");
-const gamesHeader = document.querySelector(".games-header");
-const contentGamesSection = document.querySelector(".games-section");
+// const paginationList = document.querySelector(".pagination");
+// const contentEmptyGames = document.querySelector(".empty-games-wrap");
+// const gamesHeader = document.querySelector(".games-header");
+// const contentGamesSection = document.querySelector(".games-section");
 const signInButton = document.querySelector(".nav-btnSign-in");
-const headerNavBtnMobileLogOut = document.querySelector(".header-nav-btn-mobile-log-out");
 
 // switch empty games to gamesHeader and pagination
 // const checkEmptyGames = () =>{
@@ -42,7 +41,6 @@ const changeHeader = () =>{
     const user = JSON.parse(localStorage.getItem("user"));
 
     if(user){
-        // headerNavBtnMobileLogOut.classList.remove("hidden");
         authedHeader.style.display = "flex";
         headerNavBtn.style.display = "none";          
         signInButton.style.display = "none"; 
@@ -51,7 +49,6 @@ const changeHeader = () =>{
        
     }
     else{
-        // headerNavBtnMobileLogOut.classList.add("hidden");
         authedHeader.style.display = "none";
         headerNavBtn.style.display = "flex"; 
         signInButton.style.display = "flex"; 
@@ -92,29 +89,22 @@ const isUserSignIn = () =>{
 
 const handleSignInFormBtn = () =>{
     isUserSignIn();
-    checkEmptyGames();
+    // checkEmptyGames();
 }
 
 signInFormBtn.addEventListener("click", handleSignInFormBtn);
 
 const handleLogOut = () =>{
-    userMenu.classList.add("hidden");
     localStorage.setItem("user", null);
+    userMenu.classList.add("hidden");
     changeHeader();
-    checkEmptyGames();
+
 }
 
 logOutBtn.addEventListener("click", handleLogOut);
 
-const handleHeaderNavBtnMobileLogOut = () =>{
-    localStorage.setItem("user", null);
-    logOutBtn.classList.add("hidden");
-    headerNavBtnMobile.style.display = "flex"; 
-}
-
-logOutBtn.addEventListener("click", handleHeaderNavBtnMobileLogOut);
 
 window.addEventListener("DOMContentLoaded", () =>{
     changeHeader();
-    checkEmptyGames();
+    // checkEmptyGames();
 });
