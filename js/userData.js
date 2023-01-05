@@ -1,11 +1,14 @@
 import { USERS } from "../mocks/users.js"
 
+const initialUsers = [...USERS];
 const usersDataList = document.querySelector(".users-list-class");
-const usersFilterRoleSelect = document.querySelector(".btnSelectRole");
+const usersRoleSelect = document.querySelector(".btnSelectRole");
+const selectId = document.getElementById("select");
+const resetButton = document.querySelector(".reset-button");
 
 const renderItem = (user) =>{
     const rowElement = document.createElement("tr");
-    // rowElement.classList.add("users-list-row");
+    rowElement.classList.add("users-list-row");
 
     usersDataList.innerHTML = `
     <tbody>
@@ -71,8 +74,7 @@ const handleBtnReset = () =>{
     renderList(usersDataList, initialUsers);
 }
 
-// sort
-
+//sort:
 const handleRoleSelect = (e) =>{
     const sortRole = e.target.value;
     let sortedUsers = null;
@@ -93,8 +95,9 @@ const handleRoleSelect = (e) =>{
     }
     
     renderList(usersDataList, sortedUsers);
+    
+    resetButton.addEventListener("click", handleBtnReset);
 }
 
-usersFilterRoleSelect.addEventListener("change", handleRoleSelect);
+usersRoleSelect.addEventListener("change", handleRoleSelect);
 
-dialogRoleShow ();
