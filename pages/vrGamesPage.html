@@ -52,7 +52,7 @@
                                 </button>
                                   <div class="backdrop hidden"></div>
                                   <div class="authed-header-menu-wrap hidden">
-                                    <button class="authed-header-menu-btn"><a href="#" target="_blank">My Profile</a></button>
+                                    <button class="authed-header-menu-btn"><a href="./myProfile.html" target="_blank">My Profile</a></button>
                                     <button class="authed-header-menu-btn log-out-btn"><p>Log Out</p></button>
                                     <div class="authed-header-arrow"></div>
                                 </div>
@@ -89,11 +89,15 @@
                     <h3 class="games-header-text">VR Games<h3>
                 <div class="games-header-controll">
                     <button class="btnAdd btn">Add New Game</button>
-                    <select class="btnSelect">
-                        <option value="default" class="btnSelectSort" >Sort By Date</option>
-                        <option value="new-first" class="filter__search-option">New first</option>
-                        <option value="new-second" class="filter__search-option">New last</option>
+                    <select id="select" class="select-option-game btnSelect">
+                        <option value="default" Selected disabled class="select-option-game-date btnSelectSort" >Sort By Date</option>
+                        <option value="new-first" class="select-option-game-date">New first</option>
+                        <option value="new-second" class="select-option-game-date">New last</option>
                     </select>
+                    <span class="select-option-game-date-arrow"></span>
+                    </div>
+                        <button type="submit" class="reset-button"><img class="reset-btn" src="../assets/img/reset.png" alt="reset"></button>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,5 +1,6 @@
 import { CARDS } from "../mocks/cards.js"
 
+const initialCards = [...CARDS];
 const cardsList = document.querySelector(".games-section");
 
 //render cards:

@@ -20,7 +20,7 @@ const signInButton = document.querySelector(".nav-btnSign-in");
 // switch empty games to gamesHeader and pagination
 // const checkEmptyGames = () =>{
 //     const loggedUser = JSON.parse(localStorage.getItem("user"));
-//     const gamesInLocalStorage = JSON.parse(localStorage.getItem("cards"));
+//     const gamesInLocalStorage = JSON.parse(localStorage.getItem("card"));
 
 //     if(loggedUser != null){
 //         paginationList.style.display = "flex";
@@ -52,15 +52,12 @@ const changeHeader = () =>{
         authedHeader.style.display = "none";
         headerNavBtn.style.display = "flex"; 
         signInButton.style.display = "flex"; 
-        // overlay.classList.add('open');
-        // auth.classList.add('open');
-       
     }
 }
 
 const resetInputsField = () =>{
     signInEmail.value = "";
-    signInPassword.value="";
+    signInPassword.value = "";
 }
 
 const checkInputPassword = () =>{
