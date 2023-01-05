@@ -2,6 +2,9 @@ import { CARDS } from "../mocks/cards.js"
 
 const initialCards = [...CARDS];
 const cardsList = document.querySelector(".games-section");
+const CardsDataSelect = document.querySelector(".select-option-game");
+const resetButton = document.querySelector(".reset-button");
+const selectId = document.getElementById("select");
 
 //render cards:
 
@@ -46,3 +49,39 @@ const renderList = (element, list, className) => {
 }
 
 renderList(cardsList, CARDS, "games-section");
+
+//default cards:
+
+const handleBtnReset = () =>{
+    cardsList.innerHTML = "";
+    resetButton.style.display = "none";
+    selectId.value = "default";
+
+    renderList(cardsList, initialCards, "games-section");
+}
+
+//sort cards:
+
+const handleSortCards = (e) =>{
+    cardsList.innerHTML = "";
+    const sortType = e.target.value;
+    let sortedGames = null;
+
+//sort:
+
+    switch (sortType) {
+        case "new-first": 
+            resetButton.style.display = "block";
+            sortedGames = CARDS.sort((a, b) => b.date - a.date);
+            break;
+        case "new-second":
+            resetButton.style.display = "block";
+            sortedGames = CARDS.sort((a, b) => a.date - b.date);
+            break;        
+        }
+
+        renderList(cardsList, sortedGames, "games-section");
+        resetButton.addEventListener("click", handleBtnReset);
+    }
+
+    CardsDataSelect.addEventListener("change", handleSortCards);
