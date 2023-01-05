@@ -7,11 +7,12 @@ const cardsList = document.querySelector(".games-section");
 
 const renderItem = (card) =>{
     const liElement = document.createElement("li");
+    liElement.classList.add("game-card-list");
 
 
 
     liElement.innerHTML = `
-    <li class="game-card" data-aos="flip-right">
+    <div class="game-card" data-aos="flip-right">
         <img class="game-img" src="../assets/img/games/${card.img}.png" alt=${card.alt}> 
         <div class="card-wrap-text">
             <div class="card-wrap-text-left">
@@ -23,7 +24,7 @@ const renderItem = (card) =>{
                 <p class="user-review">${card.user.userReview}</p>
             </diw>
         </div>
-    </li>
+    </div>
     `;
 
     return liElement;
@@ -31,12 +32,12 @@ const renderItem = (card) =>{
 
 const renderList = (element, list, className) => {
     const divElement = document.createElement("div");
-      
+      divElement.classList.add(className);
     
 
     const completeDivElement = list.slice(0,12).reduce((divElement, item) =>{
         divElement.appendChild(renderItem(item));
-        divElement.classList.add(className);
+        
 
         return divElement;
     }, divElement);
