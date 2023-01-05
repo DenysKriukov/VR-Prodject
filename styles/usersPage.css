@@ -276,28 +276,81 @@ body {
 
 .users-header-controll {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-    padding: 0px;
-    gap: 32px;
 }
 
-.btnSelect {
-    box-sizing: border-box;
+.select-users-role {
+    position: relative;
+    margin-left: 32px;
+}
+  
+.select-option-users-role-arrow {
+    position: absolute;
+    display: block;
+    top: 18px;
+    right: 16px;
+    background: #0e0e0e;
+    max-width: 5px;
+    max-height: 10px;
+    border: 1px solid;
+    border-radius: 4px;
+    pointer-events: none;
+}
+    
+.select-option-users-role-arrow::before,
+.select-option-users-role-arrow::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+    
+.select-option-users-role-arrow::before {
+    border-top: 5px solid #bc3cd8;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+  
+.reset-button {
+      display: none;
+      height: 30px;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #fff;
+      background: rgba(14, 14, 14, 1);
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+}
+  
+.reset-btn{
+      max-width: 30px;
+}
+  
+.btnSelectRole {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-    font-family: 'Poppins';
+    width: 160px;
+    height: 40px;
+    padding-left: 20px;
+    appearance: none;
+    border: 1px solid #bc3cd8;
+    border-radius: 6px;
+    background: #0e0e0e;
+    font-family: "Poppins";
+    font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 0%;
-    padding: 8px 14px;
-    border: 1px solid #BC3CD8;
-    border-radius: 6px;
-    background-color: #010101;
-    color: #fff;
+    line-height: 143%;
+    letter-spacing: 0.018em;
+    color: #ffffff;
+    cursor: pointer;
 }
 
          /* -------users section  ------- */

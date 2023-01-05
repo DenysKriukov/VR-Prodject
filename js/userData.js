@@ -1,7 +1,7 @@
 import { USERS } from "../mocks/users.js"
 
 const usersDataList = document.querySelector(".users-list-class");
-const usersFilterRoleSelect = document.querySelector(".btnSelect");
+const usersFilterRoleSelect = document.querySelector(".btnSelectRole");
 
 const renderItem = (user) =>{
     const rowElement = document.createElement("tr");

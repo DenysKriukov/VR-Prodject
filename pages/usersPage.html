@@ -80,15 +80,19 @@
     <section>
         <div class="container">
             <div class="users-header">
-                    <h3 class="users-header-text">VR Users</h3>
-                <div class="users-header-controll">
-                    <select id="select" class="btnSelect">
-                        <option class="users-change-role" value="default">Sort By Role</option>
-                        <option class="users-change-role" vlaue="admin">admin</option>
-                        <option class="users-change-role" vlaue="moderator">moderator</option>
-                        <option class="users-change-role" vlaue="user">user</option>
-                    </select>
-                </div>
+            <h3 class="users-header-text">VR Users</h3>
+            <div class="users-header-controll">
+                    <div class="select-users-role">
+                        <select id="select" class="select-option-users btnSelectRole">
+                            <option class="select-option-users-role" value="default" Selected disabled>Sort By Role</option>
+                            <option class="select-option-users-role" vlaue="admin">admin</option>
+                            <option class="select-option-users-role" vlaue="moderator">moderator</option>
+                            <option class="select-option-users-role" vlaue="user">user</option>
+                        </select>
+                        <span class="select-option-users-role-arrow"></span>
+                    </div>
+                    <button type="submit" class="reset-button"><img class="reset-btn" src="../assets/img/reset.png" alt="reset"></button>
+            </div>
             </div>
          <!-- ---------------------------user list-------------- -->
         <div class="user-list-wrap">

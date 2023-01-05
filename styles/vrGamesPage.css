@@ -272,6 +272,7 @@ body {
     display: flex;
     align-items: center;
 }
+
 .games-header-controll {
   display: flex;
   align-items: center;
@@ -311,7 +312,6 @@ body {
   border-right: 5px solid transparent;
 }
 
-  
 .reset-button {
     display: none;
     height: 30px;
@@ -326,12 +326,12 @@ body {
     border: none;
     cursor: pointer;
 }
-  
+
 .reset-btn{
     max-width: 30px;
 }
 
-.btnSelect {
+.btnSelectData {
   display: flex;
   align-items: center;
   width: 160px;
