@@ -5,6 +5,7 @@ const usersDataList = document.querySelector(".users-list-class");
 const usersRoleSelect = document.querySelector(".btnSelectRole");
 const selectId = document.getElementById("select");
 const resetButton = document.querySelector(".reset-button");
+const background = document.querySelector(".backdrop");
 
 const renderItem = (user) =>{
     const rowElement = document.createElement("tr");
@@ -32,7 +33,7 @@ const renderItem = (user) =>{
     <td>${user.email}</td>
     <td>${user.role}</td>
     <td class="users-list-action">
-        <button type="submit" class="users-dots">
+        <button type="submit" class="users-dots" data-id="${user.id}" data-name="${user.name}">
             <img class="users-list-dots" src="../assets/img/userListDots.svg" alt="">
         </button>
         <div class="role hidden">
@@ -64,7 +65,66 @@ const renderList = (element, list) =>{
 
 renderList(usersDataList, USERS,);
 
+const dialogRoleShow = () =>{
+    const userRole = JSON.parse(localStorage.getItem("user")).role;
+    const userLogged = JSON.parse(localStorage.getItem("user"));
+    const usersBtnDots = document.querySelectorAll(".users-dots");
+    const role = document.querySelectorAll(".role");
+    const RoleChangeRole = document.querySelectorAll(".role-change-role");
+    const RoleSendEmail = document.querySelectorAll(".role-send-email");
+    const RoleBlock = document.querySelectorAll(".role-block");
+    const RoleDelete = document.querySelectorAll(".role-delete");
+    
+    for(let elem in usersBtnDots){
+        const handleUsersBtnDots = () =>{
+                role[elem].classList.toggle("hidden");
+                
+                if(userRole === "moderator"){
+                    RoleDelete[elem].classList.add("hidden");
+                }
+    
+                if(userRole === "user"){
+                    RoleChangeRole[elem].classList.add("hidden");
+                    RoleBlock[elem].classList.add("hidden");
+                    RoleDelete[elem].classList.add("hidden");
+                }
+    
+                RoleChangeRole[elem].addEventListener("click", function showRole(){
+                    console.log("change role:", "\n",
+                    "id:", userLogged.id, "name:", userLogged.name, "\n",
+                    "id:", usersBtnDots[elem].getAttribute("data-id"), "name:", usersBtnDots[elem].getAttribute("data-name"));
+                })
+    
+                RoleBlock[elem].addEventListener("click", () => {     
+                    console.log("block:", "\n",
+                    "id:", userLogged.id, "name:", userLogged.name, "\n",
+                    "id:", usersBtnDots[elem].getAttribute("data-id"), "name:", usersBtnDots[elem].getAttribute("data-name"));
+                })
+    
+                RoleDelete[elem].addEventListener("click", () => {
+                    console.log("delete:", "\n",
+                    "id:", userLogged.id, "name:", userLogged.name, "\n",
+                    "id:", usersBtnDots[elem].getAttribute("data-id"), "name:", usersBtnDots[elem].getAttribute("data-name"));
+                })
+    
+                RoleSendEmail[elem].addEventListener("click", () => {
+                    console.log("send email:", "\n",
+                    "id:", userLogged.id, "name:", userLogged.name, "\n",
+                    "id:", usersBtnDots[elem].getAttribute("data-id"), "name:", usersBtnDots[elem].getAttribute("data-name"));
+                })
+    
+                background.classList.toggle("hidden");
+        }
 
+        usersBtnDots[elem].addEventListener("click", handleUsersBtnDots);       
+
+        background.addEventListener("click", () =>{
+            background.classList.add("hidden");
+            role[elem].classList.add("hidden");
+        })
+    }
+
+}
 
 //default users order:
 const handleBtnReset = () =>{
@@ -101,3 +161,4 @@ const handleRoleSelect = (e) =>{
 
 usersRoleSelect.addEventListener("change", handleRoleSelect);
 
+dialogRoleShow ();

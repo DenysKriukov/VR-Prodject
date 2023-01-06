@@ -1,20 +1,20 @@
-// const overlay = document.querySelectorAll(".overlay");
-// const auth = document.querySelectorAll(".authorization");
-// const signInButton = document.querySelector(".empty-games-btn-singIn");
+const overlay = document.querySelector(".overlay");
+const auth = document.querySelector(".authorization");
+const signInButton = document.querySelectorAll(".empty-games-btn-singIn");
 
 
 
-// signInButton.addEventListener('click', () => {
-//    overlay.classList.add('open');
-//    auth.classList.add('open');
-//    scrollController.disabledScroll();
-// })
+signInButton.addEventListener('click', () => {
+   overlay.classList.add('open');
+   auth.classList.add('open');
+   scrollController.disabledScroll();
+})
 
-// overlay.addEventListener('click', () => {
-//    overlay.classList.remove('open');
-//    auth.classList.remove('open');
-//    scrollController.enabledScroll();
-// })
+overlay.addEventListener('click', () => {
+   overlay.classList.remove('open');
+   auth.classList.remove('open');
+   scrollController.enabledScroll();
+})
 
 
 // const scrollController = {

@@ -411,6 +411,7 @@ body {
 }
 
 .users-dots {
+    position: relative;
     padding: 8px 14px;
     background: transparent;
     border-color: transparent;
@@ -422,7 +423,6 @@ body {
 } 
 
 .role {
-    display: none;
     position: absolute;
     padding: 16px 16px;
     width: 116px;
@@ -431,7 +431,7 @@ body {
     border-radius: 6px;
     top: 250px;
     right: 400px;
-    z-index: 12;
+    z-index: 120;
 }
 
 .role-list {
@@ -456,8 +456,29 @@ body {
     border-radius: 6px;
     background-color: #010101;
     color: #fff;
+    
 }
 
+.role-item button {
+    list-style: none;
+    flex-direction: column;
+    text-decoration: none;
+    padding: 0;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #f2f2f2;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .role-item button:hover {
+    color: #919eab;
+  }
+  
 /* ----------------- pagination ----- */
 
 .pagination {
