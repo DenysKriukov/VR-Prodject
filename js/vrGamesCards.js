@@ -12,8 +12,6 @@ const renderItem = (card) =>{
     const liElement = document.createElement("li");
     liElement.classList.add("game-card-list");
 
-
-
     liElement.innerHTML = `
     <div class="game-card" data-aos="flip-right">
         <img class="game-img" src="../assets/img/games/${card.img}.png" alt=${card.alt}> 
