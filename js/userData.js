@@ -1,6 +1,6 @@
 import { USERS } from "../mocks/users.js"
 
-const initialUsers = [...USERS];
+const initializedUsers = [...USERS];
 const usersDataList = document.querySelector(".users-list-class");
 const usersRoleSelect = document.querySelector(".btnSelectRole");
 const selectId = document.getElementById("select");
@@ -23,8 +23,7 @@ const renderItem = (user) =>{
             <th>Actions</th>
         </tr>
     </tbody>
-`
-    
+`;
     rowElement.innerHTML = `
     <td><img class="users-list-img" src="../assets/img/${user.img}.png" alt="${user.name}"></td>
     <td>${user.name}</td>
@@ -65,10 +64,48 @@ const renderList = (element, list) =>{
 
 renderList(usersDataList, USERS,);
 
+
+//default users:
+const handleBtnReset = () => {
+    resetButton.style.display = "none";
+    selectId.value = "default";
+    
+    renderList(usersDataList, initializedUsers);
+}
+
+//sort:
+const handleRoleSelect = (e) => {
+    const sortRole = e.target.value;
+    let sortedUsers = null;
+    
+    switch (sortRole) {
+        case "admin": 
+            resetButton.style.display = "block";
+            sortedUsers = USERS.sort((a) => a.role === "admin" ?  -1 : 0);
+            break;
+        case "moderator":
+            resetButton.style.display = "block";
+            sortedUsers = USERS.sort((a) => a.role === "moderator" ?  -1 : 0);
+            break;
+        case "user":
+            resetButton.style.display = "block";
+            sortedUsers = USERS.sort((a) => a.role === "user" ?  -1 : 0);
+            break;
+    }
+    
+    renderList(usersDataList, sortedUsers);
+    
+    resetButton.addEventListener("click", handleBtnReset);
+}
+
+usersRoleSelect.addEventListener("change", handleRoleSelect);
+
+
+//dialog Role:
 const dialogRoleShow = () =>{
     const userRole = JSON.parse(localStorage.getItem("user")).role;
     const userLogged = JSON.parse(localStorage.getItem("user"));
-    const usersBtnDots = document.querySelectorAll(".users-dots");
+    const usersBtnDots = document.querySelectorAll(".users-list-dots");
     const role = document.querySelectorAll(".role");
     const RoleChangeRole = document.querySelectorAll(".role-change-role");
     const RoleSendEmail = document.querySelectorAll(".role-send-email");
@@ -76,7 +113,7 @@ const dialogRoleShow = () =>{
     const RoleDelete = document.querySelectorAll(".role-delete");
     
     for(let elem in usersBtnDots){
-        const handleUsersBtnDots = () =>{
+        const handleUsersBtnDots = () => {
                 role[elem].classList.toggle("hidden");
                 
                 if(userRole === "moderator"){
@@ -116,7 +153,7 @@ const dialogRoleShow = () =>{
                 background.classList.toggle("hidden");
         }
 
-        usersBtnDots[elem].addEventListener("click", handleUsersBtnDots);       
+ usersBtnDots[elem].addEventListener("click", handleUsersBtnDots);       
 
         background.addEventListener("click", () =>{
             background.classList.add("hidden");
@@ -125,40 +162,5 @@ const dialogRoleShow = () =>{
     }
 
 }
-
-//default users order:
-const handleBtnReset = () =>{
-    resetButton.style.display = "none";
-    selectId.value = "default";
-    
-    renderList(usersDataList, initialUsers);
-}
-
-//sort:
-const handleRoleSelect = (e) =>{
-    const sortRole = e.target.value;
-    let sortedUsers = null;
-    
-    switch (sortRole) {
-        case "admin": 
-            resetButton.style.display = "block";
-            sortedUsers = USERS.sort((a) => a.role === "admin" ?  -1 : 0);
-            break;
-        case "moderator":
-            resetButton.style.display = "block";
-            sortedUsers = USERS.sort((a) => a.role === "moderator" ?  -1 : 0);
-            break;
-        case "user":
-            resetButton.style.display = "block";
-            sortedUsers = USERS.sort((a) => a.role === "user" ?  -1 : 0);
-            break;
-    }
-    
-    renderList(usersDataList, sortedUsers);
-    
-    resetButton.addEventListener("click", handleBtnReset);
-}
-
-usersRoleSelect.addEventListener("change", handleRoleSelect);
 
 dialogRoleShow ();

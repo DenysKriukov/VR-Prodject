@@ -65,16 +65,19 @@
         <!-- ----------------------------sing in dialog-------------- -->
     
         <div class="overlay"> </div>
-            <div class="authorization">
-               <div class="modal-header">
-                   <h3 class="modal-header-text">Authorization</h3>
-               </div> 
-               <form class="modal-form">
-                   <input id="sign-in-email" class="modal-input modal-email" type="email" placeholder="Email or username" />
-                   <input id="sign-in-password" class="modal-input modal-password" type="password" placeholder="Password" />
-               </form> 
-               <button class="modal-SignIn btn" type="submit">Sign in</button>
-           </div>
+        <div class="authorization">
+           <div class="modal-header">
+               <h3 class="modal-header-text">Authorization</h3>
+           </div> 
+           <form class="modal-form">
+               <input id="sign-in-email" class="modal-input modal-email" type="email" 
+               autocomplete="username"placeholder="Email or username" />
+               <input id="sign-in-password" class="modal-input modal-password" type="password"
+               autocomplete="current-password" placeholder="Password" />
+           </form> 
+           <button class="modal-SignIn btn" type="submit">Sign in</button>
+       </div>
+
     
     <!-- ----------------------------users header ----------->
     <section>
