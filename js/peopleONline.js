@@ -6,11 +6,9 @@ const renderItem = (user) =>{
     const liElement = document.createElement("li");
 
     liElement.innerHTML = `
-    <li>
     <img src="../assets/img/${user.img}.png" 
     class="hero-people-img" 
     alt="client avatar">
-    </li>
     `;
 
     return liElement;
