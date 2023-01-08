@@ -316,7 +316,7 @@ body {
   
 .reset-button {
       display: none;
-      height: 30px;
+      height: 55px;
       font-family: "Poppins";
       font-style: normal;
       font-weight: 500;
@@ -330,7 +330,7 @@ body {
 }
   
 .reset-btn{
-      max-width: 30px;
+      max-width: 50px;
 }
   
 .btnSelectRole {
@@ -363,8 +363,8 @@ body {
     margin-bottom: 32px;
     width: 100%;
     /* text-align: -webkit-center; */
-    overflow-x: hidden;
-    overflow-y: hidden; 
+    /* overflow-x: hidden; */
+    /* overflow-y: hidden;  */
 }
 
 .users-list-class {
@@ -392,8 +392,6 @@ body {
 .users-list-class tbody {
     width: fit-content;
     text-align: center;
-    /* overflow-x: hidden; */
-    /* padding-bottom: 28px; */
 }
 
 .users-list-class th {
