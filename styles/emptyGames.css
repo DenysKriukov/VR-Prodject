@@ -187,6 +187,7 @@ body {
     text-decoration-line: underline;
     color: #bc3cd8;
     background: transparent;
+    border: transparent;
     cursor: pointer;
   }
   

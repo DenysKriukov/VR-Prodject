@@ -19,20 +19,31 @@
 
 const overlay = document.querySelector(".overlay");
 const auth = document.querySelector(".authorization");
-const signInButton = document.querySelector(".nav-btnSign-in");
-const closeSingIn = document.querySelector(".overlay");
+var signInButton = document.querySelectorAll(".btnSignIn");
+const closeSingIn = document.querySelectorAll(".overlay");
 
-signInButton.addEventListener('click', () => {
-   overlay.classList.add('open');
+signInButton.forEach(function(button){
+   button.addEventListener('click', (e) => {
+      e.preventDefault();
+      overlay.classList.add('open');
    auth.classList.add('open');
    scrollController.disabledScroll();
 })
-
-closeSingIn.addEventListener('click', () => {
-   overlay.classList.remove('open');
-   auth.classList.remove('open');
-   scrollController.enabledScroll();
 })
+
+closeSingIn.forEach(function(e){
+   e.addEventListener('click', (e) => {
+      e.preventDefault();
+      overlay.classList.remove('open');
+   auth.classList.remove('open');
+   scrollController.disabledScroll();
+})
+})
+// closeSingIn.addEventListener('click', () => {
+//    overlay.classList.remove('open');
+//    auth.classList.remove('open');
+//    scrollController.enabledScroll();
+// })
 
 
 const scrollController = {
