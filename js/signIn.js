@@ -36,9 +36,10 @@ closeSingIn.forEach(function(e){
       e.preventDefault();
       overlay.classList.remove('open');
    auth.classList.remove('open');
-   scrollController.disabledScroll();
+   scrollController.enabledScroll();
 })
 })
+
 // closeSingIn.addEventListener('click', () => {
 //    overlay.classList.remove('open');
 //    auth.classList.remove('open');

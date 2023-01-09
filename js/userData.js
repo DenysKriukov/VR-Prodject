@@ -100,7 +100,6 @@ const handleRoleSelect = (e) => {
 
 usersRoleSelect.addEventListener("change", handleRoleSelect);
 
-
 //dialog Role:
 const dialogRoleShow = () =>{
     const userRole = JSON.parse(localStorage.getItem("user")).role;

@@ -11,31 +11,31 @@ const logOutBtn = document.querySelector(".log-out-btn");
 const userMenu = document.querySelector(".authed-header-menu-wrap");
 const signInEmail = document.getElementById("sign-in-email");
 const signInPassword = document.getElementById("sign-in-password");
-// const paginationList = document.querySelector(".pagination");
-// const contentEmptyGames = document.querySelector(".empty-games-wrap");
-// const gamesHeader = document.querySelector(".games-header");
-// const contentGamesSection = document.querySelector(".games-section");
+const paginationList = document.querySelector(".pagination");
+const contentEmptyGames = document.querySelector(".empty-games-wrap");
+const gamesHeader = document.querySelector(".games-header");
+const contentGamesSection = document.querySelector(".games-section");
 const signInButton = document.querySelector(".nav-btnSign-in");
 
 // switch empty games to gamesHeader and pagination
-// const checkEmptyGames = () =>{
-//     const loggedUser = JSON.parse(localStorage.getItem("user"));
-//     const gamesInLocalStorage = JSON.parse(localStorage.getItem("card"));
+const checkEmptyGames = () =>{
+    const loggedUser = JSON.parse(localStorage.getItem("user"));
+    const gamesInLocalStorage = JSON.parse(localStorage.getItem("card"));
 
-//     if(loggedUser != null){
-//         paginationList.style.display = "flex";
-//         contentEmptyGames.style.display = "none";
-//         gamesHeader.style.display = "block";
-//         contentGamesSection.style.display = "flex";
-//     }
+    if(loggedUser != null){
+        paginationList.style.display = "flex";
+        contentEmptyGames.style.display = "none";
+        gamesHeader.style.display = "flex";
+        contentGamesSection.style.display = "flex";
+    }
 
-//     if(!loggedUser || loggedUser === null && gamesInLocalStorage != null){
-//         paginationList.style.display = "none";
-//         contentEmptyGames.style.display = "flex";
-//         gamesHeader.style.display = "none";
-//         contentGamesSection.style.display = "none";
-//     } 
-// }
+    if(!loggedUser || loggedUser === null && gamesInLocalStorage != null){
+        paginationList.style.display = "none";
+        contentEmptyGames.style.display = "flex";
+        gamesHeader.style.display = "none";
+        contentGamesSection.style.display = "none";
+    } 
+}
 
 const changeHeader = () =>{
     const user = JSON.parse(localStorage.getItem("user"));
@@ -86,7 +86,7 @@ const isUserSignIn = () =>{
 
 const handleSignInFormBtn = () =>{
     isUserSignIn();
-    // checkEmptyGames();
+    checkEmptyGames();
 }
 
 signInFormBtn.addEventListener("click", handleSignInFormBtn);
@@ -95,6 +95,7 @@ const handleLogOut = () =>{
     localStorage.setItem("user", null);
     userMenu.classList.add("hidden");
     changeHeader();
+    checkEmptyGames();
 
 }
 
@@ -103,5 +104,6 @@ logOutBtn.addEventListener("click", handleLogOut);
 
 window.addEventListener("DOMContentLoaded", () =>{
     changeHeader();
-    // checkEmptyGames();
+    checkEmptyGames();
 });
+

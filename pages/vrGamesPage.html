@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/vrGamesPage.css">
+    <link rel="stylesheet" href="../styles/emptyGames.css">
     <link rel="stylesheet" href="../styles/reset.css">
     <!-- <link rel="stylesheet" href="../styles/main.css"> -->
     <link rel="stylesheet" href="../styles/media.css">
@@ -108,36 +109,49 @@
 
     <!-- ---------------------add new game dialog---------- -->
 
-    <div class="overlayNewGame"> </div>
-    <div class="newGame">
+    <div class="overlay hidden-overlay"></div>
+    <div class="addNewGame modal hidden">
         <div class="modal-header">
             <h5 class="modal-header-text">Add New Game</h5>
         </div>
         <form class="modal-form">
             <input
             class="newGame-name modal-input"
-            type="text"
+            type="text"id="adding-name"
             placeholder="Game name"
             />
             <input
             class="newGame-description modal-input"
-            type="text"
+            type="text" id="adding-description"
             placeholder="Game description"
             />
             <input
             class="newGame-review modal-input"
-            type="text"
+            type="text" id="adding-review"
             placeholder="Game review"
             />
-            <input
-            class="newGame-image modal-input"
-            type="text"
-            placeholder="Game image"
-            />
+            <select class="newGame-image modal-input"
+            type="text"id="adding-image">
+                <option value="default" disabled selected >Game Image</option>
+                <option value="assassinsCreed">Assassins Creed</option>
+                <option value="battlefield">Battlefield</option>
+                <option value="gborderlands">Borderlands</option>
+                <option value="crysis3">Crysis3</option>
+                <option value="deadSpace">Dead Space</option>
+                <option value="dragonAge">Dragon Age</option>
+                <option value="farCry">Far Cry</option>
+                <option value="fifa20">FIFA 20</option>
+                <option value="massEffect">Mass Effect</option>
+                <option value="maxPayne2">Max Payne 2</option>
+                <option value="metro">Metro</option>
+                <option value="rage">Rage</option>
+                <option value="wolfenstein">Wolfenstein</option>
+                <option value="wrc5">WRC 5</option>
+              </select>
+        </form>
             <button class="modal-Add btn realities-btn" type="submit">
             Add New Game
             </button>
-        </form>
     </div>
 
 
@@ -145,9 +159,39 @@
 
     <section>
         <div class="container">
-            <ul class="games-section"></ul>       
+            <ul class="games-section"></ul> 
+                <div class="overlay hidden-overlay"></div>
+                <div class="game-dialog modal hidden">
+                    <div class="game-card">
+                        <img class="game-img" src="../assets/img/games/${card.img}.png" alt=${card.alt}> 
+                        <div class="card-wrap-text">
+                            <div class="card-wrap-text-left">
+                                <h4 class="game-name">game-name</h4>
+                                <p class="game-description">game-description</p>
+                            </div> 
+                            <diw class="card-wrap-text-right">
+                                <h4 class="user-name">user-name</h4>
+                                <p class="user-review">user-review</p>
+                            </diw>
+                        </div>
+                    </div>
+                </div>      
         </div>           
     </section>
+
+    <!-- ---------------------------- Empty games ----------->
+
+    <section>
+        <div class="container">
+            <div class="empty-games-wrap">
+                <h1 class="empty-games-header">EmptyGames</h1>
+                <div class="empty-games-description">
+                    <p><button class="btnSignIn empty-games-btn-singIn">Sign in</button> for adding games</p>
+                </div>
+            </div>
+        </div>
+        
+    </section> 
 
     <!-- --------------------------pagination---- -->
 
@@ -169,7 +213,7 @@
 
     <footer>
         <div class="container">
-            <div class="footer" data-aos="flip-down">
+            <div class="footer">
                 <h4 class="footer-header-text">Explore product in new way</h4>
                 <p class="footer-header-description">We specialize in creating visual identities for products and branda in your company.</p>    
                 <form class="footer-form" >
@@ -190,7 +234,6 @@
     <script type="module" src="../js/dialogSingInUsers.js"></script>
     <script src="../js/addNewGame.js"></script>
     <script src="../js/emailForm.js"></script>
-    <!-- <script src="../mocks/cards.js"></script>  -->
     <script type="module" src="../js/vrGamesCards.js"></script> 
 
 </body>
