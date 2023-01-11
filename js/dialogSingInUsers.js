@@ -20,7 +20,7 @@ const signInButton = document.querySelector(".nav-btnSign-in");
 // switch empty games to gamesHeader and pagination
 const checkEmptyGames = () =>{
     const loggedUser = JSON.parse(localStorage.getItem("user"));
-    const gamesInLocalStorage = JSON.parse(localStorage.getItem("card"));
+    const gamesInLocalStorage = JSON.parse(localStorage.getItem("cards"));
 
     if(loggedUser != null){
         paginationList.style.display = "flex";

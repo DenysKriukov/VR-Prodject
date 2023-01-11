@@ -109,8 +109,8 @@
 
     <!-- ---------------------add new game dialog---------- -->
 
-    <div class="overlay hidden-overlay"></div>
-    <div class="addNewGame modal hidden">
+    <div class="overlayNewGame"> </div>
+    <div class="newGame">
         <div class="modal-header">
             <h5 class="modal-header-text">Add New Game</h5>
         </div>
@@ -160,18 +160,18 @@
     <section>
         <div class="container">
             <ul class="games-section"></ul> 
-                <div class="overlay hidden-overlay"></div>
+                <div class="overlay"></div>
                 <div class="game-dialog modal hidden">
                     <div class="game-card">
-                        <img class="game-img" src="../assets/img/games/${card.img}.png" alt=${card.alt}> 
+                        <img class="game-dialog-game-img" src="../assets/img/games/assassinsCreed.png" alt=${card.alt}> 
                         <div class="card-wrap-text">
                             <div class="card-wrap-text-left">
-                                <h4 class="game-name">game-name</h4>
-                                <p class="game-description">game-description</p>
+                                <h4 class="game-dialog-game-name">game-name</h4>
+                                <p class="game-dialog-game-description">game-description</p>
                             </div> 
                             <diw class="card-wrap-text-right">
-                                <h4 class="user-name">user-name</h4>
-                                <p class="user-review">user-review</p>
+                                <h4 class="game-dialog-user-name">user-name</h4>
+                                <p class="game-dialog-user-review">user-review</p>
                             </diw>
                         </div>
                     </div>
@@ -235,6 +235,7 @@
     <script src="../js/addNewGame.js"></script>
     <script src="../js/emailForm.js"></script>
     <script type="module" src="../js/vrGamesCards.js"></script> 
+    <script type="module" src="../js/dialogAddNewGame.js"></script>
 
 </body>
 

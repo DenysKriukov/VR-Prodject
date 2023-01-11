@@ -16,7 +16,7 @@
     position: relative;
     width: 720px;
     height: 722px;
-box-sizing: border-box;
+    box-sizing: border-box;
     background: #0E0E0E;
     border-radius: 6px;
 }
@@ -99,4 +99,8 @@ box-sizing: border-box;
     text-decoration-line: underline;
     
     color: #FFFFFF;   
+}
+
+.hidden {
+    display: none;
 }
