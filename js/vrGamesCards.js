@@ -5,6 +5,9 @@ const cardsList = document.querySelector(".games-section");
 const CardsDataSelect = document.querySelector(".select-option-game");
 const resetButton = document.querySelector(".reset-button");
 const selectId = document.getElementById("select");
+const gameDialog = document.querySelector(".game-dialog");
+const overlayGameDialog = document.querySelector(".overlayGame");
+
 
 //render cards:
 
@@ -27,6 +30,8 @@ const renderItem = (card) =>{
         </div>
     </div>
     `;
+
+    liElement.addEventListener("click", () => handleClickCard(card));
 
     return liElement;
 }
@@ -83,3 +88,24 @@ const handleSortCards = (e) =>{
     }
 
     CardsDataSelect.addEventListener("change", handleSortCards);
+
+    // render card dialog:
+const handleClickCard = (card) =>{
+    gameDialog.classList.remove("hidden");
+    overlayGameDialog.classList.remove("hidden");
+    scrollController.disabledScroll();
+  
+    document.querySelector(".game-dialog-game-img").src = `../assets/img/games/${card.img}.png`;
+    document.querySelector(".game-dialog-game-name").innerHTML = card.gameName;
+    document.querySelector(".game-dialog-game-description").innerHTML = card.gameDescription;
+    document.querySelector(".game-dialog-user-name").innerHTML = card.user.userName;
+    document.querySelector(".game-dialog-user-review").innerHTML = card.user.userReview;
+}
+
+const closeGameDialog = () =>{
+
+    gameDialog.classList.add("hidden");
+    overlayGameDialog.classList.add("hidden");
+    scrollController.enabledScroll();
+}
+overlayGameDialog.addEventListener("click", closeGameDialog);
