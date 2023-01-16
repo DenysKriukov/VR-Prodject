@@ -66,48 +66,49 @@ renderList(usersDataList, USERS,);
 
 
 
-// pagination();
-let arrayPage = [...USERS]
-const pagList = document.querySelectorAll('.pagination');
-const showList = document.querySelectorAll('.users-list-class');
 
-function paginationBtn(arr,size = 5){
-	let btn = '';
+
+// let arrayPage = [...USERS]
+// const pagList = document.querySelectorAll('.pagination');
+// const showList = document.querySelectorAll('.users-list-row');
+
+// function paginationBtn(arr,size = 5){
+// 	let btn = '';
 	
-	pagList.forEach((elem,i) => {
-		for(let i = 0; i < arr.length/size;i++){
-			btn += `<button class='pagination-btn'>${i + 1}</button>`
-		}
-		elem.innerHTML = btn;
-	});
-}
+// 	pagList.forEach((elem,i) => {
+// 		for(let i = 0; i < arr.length/size;i++){
+// 			btn += `<button class='pagination-btn'>${i + 1}</button>`
+// 		}
+// 		elem.innerHTML = btn;
+// 	});
+// }
 
-paginationBtn(arrayPage);
-const btnPag = document.querySelectorAll('.pagination-btn');
+// paginationBtn(arrayPage);
+// const btnPag = document.querySelectorAll('.pagination-btn');
 
-function smartList(page,size = 5){
-	let arrayList = [];
-	arrayList = arrayPage.slice().splice(page*size,size);
-	showList.forEach((elem,i) => {
-		let item = '';
-		for(let i = 0; i < arrayList.length; i++){
-			item += `<div class='users-list-row'>${arrayList[i]}</div>`
-		}
-		elem.innerHTML = item;
-	})
-	btnPag[0].classList.add('btn--active');
-}
+// function smartList(page,size = 5){
+// 	let arrayList = [];
+// 	arrayList = arrayPage.slice().splice(page*size,size);
+// 	showList.forEach((elem,i) => {
+// 		let item = '';
+// 		for(let i = 0; i < arrayList.length; i++){
+// 			item += `<div class='users-list-row'>${arrayList[i]}</div>`
+// 		}
+// 		elem.innerHTML = item;
+// 	})
+// 	btnPag[0].classList.add('btn--active');
+// }
 
-function addClass(btnElem, prevBtn){
-	prevBtn.forEach(elem => elem.classList.remove('btn--active'));
-	btnElem.classList.add('btn--active');
-}
+// function addClass(btnElem, prevBtn){
+// 	prevBtn.forEach(elem => elem.classList.remove('btn--active'));
+// 	btnElem.classList.add('btn--active');
+// }
 
-btnPag.forEach((elem,i) => {
-	elem.addEventListener('click', () => {smartList(i); addClass(elem,btnPag);});
-});
+// btnPag.forEach((elem,i) => {
+// 	elem.addEventListener('click', () => {smartList(i); addClass(elem,btnPag);});
+// });
 
-smartList(0);
+// smartList(0);
 
 
 
