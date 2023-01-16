@@ -65,40 +65,51 @@ const renderList = (element, list) =>{
 renderList(usersDataList, USERS,);
 
 
-//default users:
-const handleBtnReset = () => {
-    resetButton.style.display = "none";
-    selectId.value = "default";
-    
-    renderList(usersDataList, initializedUsers);
+
+// pagination();
+let arrayPage = [...USERS]
+const pagList = document.querySelectorAll('.pagination');
+const showList = document.querySelectorAll('.users-list-class');
+
+function paginationBtn(arr,size = 5){
+	let btn = '';
+	
+	pagList.forEach((elem,i) => {
+		for(let i = 0; i < arr.length/size;i++){
+			btn += `<button class='pagination-btn'>${i + 1}</button>`
+		}
+		elem.innerHTML = btn;
+	});
 }
 
-//sort:
-const handleRoleSelect = (e) => {
-    const sortRole = e.target.value;
-    let sortedUsers = null;
-    
-    switch (sortRole) {
-        case "admin": 
-            resetButton.style.display = "block";
-            sortedUsers = USERS.sort((a) => a.role === "admin" ?  -1 : 0);
-            break;
-        case "moderator":
-            resetButton.style.display = "block";
-            sortedUsers = USERS.sort((a) => a.role === "moderator" ?  -1 : 0);
-            break;
-        case "user":
-            resetButton.style.display = "block";
-            sortedUsers = USERS.sort((a) => a.role === "user" ?  -1 : 0);
-            break;
-    }
-    
-    renderList(usersDataList, sortedUsers);
-    
-    resetButton.addEventListener("click", handleBtnReset);
+paginationBtn(arrayPage);
+const btnPag = document.querySelectorAll('.pagination-btn');
+
+function smartList(page,size = 5){
+	let arrayList = [];
+	arrayList = arrayPage.slice().splice(page*size,size);
+	showList.forEach((elem,i) => {
+		let item = '';
+		for(let i = 0; i < arrayList.length; i++){
+			item += `<div class='users-list-row'>${arrayList[i]}</div>`
+		}
+		elem.innerHTML = item;
+	})
+	btnPag[0].classList.add('btn--active');
 }
 
-usersRoleSelect.addEventListener("change", handleRoleSelect);
+function addClass(btnElem, prevBtn){
+	prevBtn.forEach(elem => elem.classList.remove('btn--active'));
+	btnElem.classList.add('btn--active');
+}
+
+btnPag.forEach((elem,i) => {
+	elem.addEventListener('click', () => {smartList(i); addClass(elem,btnPag);});
+});
+
+smartList(0);
+
+
 
 //dialog Role:
 const dialogRoleShow = () =>{
@@ -150,16 +161,53 @@ const dialogRoleShow = () =>{
                 })
     
                 background.classList.toggle("hidden");
+                
         }
-
+   
  usersBtnDots[elem].addEventListener("click", handleUsersBtnDots);       
 
         background.addEventListener("click", () =>{
             background.classList.add("hidden");
             role[elem].classList.add("hidden");
         })
-    }
-
+    } 
 }
 
+//default users:
+const handleBtnReset = () => {
+    resetButton.style.display = "none";
+    selectId.value = "default";
+    
+    renderList(usersDataList, initializedUsers);
+}
+
+
+//sort:
+const handleRoleSelect = (e) => {
+    const sortRole = e.target.value;
+    let sortedUsers = null;
+    
+    switch (sortRole) {
+        case "admin": 
+            resetButton.style.display = "block";
+            sortedUsers = USERS.sort((a) => a.role === "admin" ?  -1 : 0);
+            break;
+        case "moderator":
+            resetButton.style.display = "block";
+            sortedUsers = USERS.sort((a) => a.role === "moderator" ?  -1 : 0);
+            break;
+        case "user":
+            resetButton.style.display = "block";
+            sortedUsers = USERS.sort((a) => a.role === "user" ?  -1 : 0);
+            break;
+    }
+    
+    renderList(usersDataList, sortedUsers );
+    
+    resetButton.addEventListener("click", handleBtnReset);
+ 
+}
+usersRoleSelect.addEventListener("change", handleRoleSelect);
+
 dialogRoleShow ();
+
