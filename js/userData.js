@@ -67,6 +67,64 @@ renderList(usersDataList, USERS,);
 
 
 
+const usersDatasRow = document.querySelector(".users-list-row");
+const paginationListBtns = document.querySelector(".pagination");
+let notesOnPage = 5;                                                               
+
+const pagination = () =>{
+    
+    const amountElementOnPage = Math.ceil(USERS.length / (notesOnPage));
+
+    let items = [];
+    for(let i = 1; i <= amountElementOnPage; i++){
+        const div = document.createElement("div");
+        div.classList.add("pagination-list");
+        div.classList.add("hidden");
+
+        if(USERS.length > notesOnPage){
+            div.classList.remove("hidden");
+        }
+
+        const button = document.createElement("button");
+        button.classList.add("pagination-btn");
+        div.appendChild(button);
+        button.innerHTML = i;
+        paginationListBtns.appendChild(div);
+        items.push(button);
+    }
+
+    let active;
+    showPage(items[0]);
+
+    for(let item of items){
+        item.addEventListener("click", function(){
+            showPage(this);
+        })
+    }
+
+    function showPage(elem) {
+        if(active){
+            active.classList.remove("active");
+        }
+        
+        active = elem;
+        elem.classList.add("active");
+    
+        let pageNum = +elem.innerHTML;
+        let start = (pageNum - 1) * notesOnPage;
+        let end = start + notesOnPage;
+        let notes = USERS.slice(start, end);
+    
+        usersDatasRow.innerHTML = "";
+    
+        renderList(usersDataList, notes);      
+    }
+}
+
+pagination();
+
+
+
 
 // let arrayPage = [...USERS]
 // const pagList = document.querySelectorAll('.pagination');
@@ -109,6 +167,8 @@ renderList(usersDataList, USERS,);
 // });
 
 // smartList(0);
+
+
 
 
 
@@ -179,7 +239,7 @@ const handleBtnReset = () => {
     resetButton.style.display = "none";
     selectId.value = "default";
     
-    renderList(usersDataList, initializedUsers);
+    renderList(usersDataList, initializedUsers.slice(0, notesOnPage));
 }
 
 

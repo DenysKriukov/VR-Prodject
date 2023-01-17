@@ -514,7 +514,7 @@ body {
     line-height: 20px;
 }
 
-.btn--active {
+.active {
     border: 1px solid #BC3CD8;
     border-radius: 4px;
     color: #BC3CD8;
