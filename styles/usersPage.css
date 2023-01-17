@@ -316,7 +316,7 @@ body {
   
 .reset-button {
       display: none;
-      height: 55px;
+      height: 40px;
       font-family: "Poppins";
       font-style: normal;
       font-weight: 500;
@@ -330,7 +330,7 @@ body {
 }
   
 .reset-btn{
-      max-width: 50px;
+      max-width: 36px;
 }
   
 .btnSelectRole {
@@ -362,6 +362,7 @@ body {
     gap: 32px; */
     margin-bottom: 32px;
     width: 100%;
+    /* max-height: 100vw; */
     /* text-align: -webkit-center; */
     /* overflow-x: hidden; */
     /* overflow-y: hidden;  */

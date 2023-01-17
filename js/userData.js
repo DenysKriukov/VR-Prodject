@@ -52,7 +52,7 @@ const renderItem = (user) =>{
 const renderList = (element, list) =>{
     const bodyElement = document.createElement("tbody");
 
-    const completeBodyElement = list.slice(0, 5).reduce((bodyElement, item) =>{
+    const completeBodyElement = list.reduce((bodyElement, item) =>{
         bodyElement.appendChild(renderItem(item));
 
         return bodyElement;
@@ -62,10 +62,10 @@ const renderList = (element, list) =>{
     element.appendChild(completeBodyElement);
 }
 
-renderList(usersDataList, USERS,);
+renderList(usersDataList, USERS);
 
 
-
+// pagination:
 
 const usersDatasRow = document.querySelector(".users-list-row");
 const paginationListBtns = document.querySelector(".pagination");
@@ -263,7 +263,7 @@ const handleRoleSelect = (e) => {
             break;
     }
     
-    renderList(usersDataList, sortedUsers );
+    renderList(usersDataList, sortedUsers.slice(0, notesOnPage) );
     
     resetButton.addEventListener("click", handleBtnReset);
  

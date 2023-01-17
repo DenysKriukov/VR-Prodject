@@ -38,10 +38,14 @@ const renderItem = (card) =>{
 
 const renderList = (element, list, className) => {
     const divElement = document.createElement("div");
-      divElement.classList.add(className);
+      divElement.classList.add("game-cards");
+      divElement.style.display = "flex";
+      divElement.style.flexWrap = "wrap";
+      divElement.style.justifyContent = "center";
+      divElement.style.gap = "40px";
     
 
-    const completeDivElement = list.slice(0,12).reduce((divElement, item) =>{
+    const completeDivElement = list.reduce((divElement, item) =>{
         divElement.appendChild(renderItem(item));
         
 
@@ -51,7 +55,68 @@ const renderList = (element, list, className) => {
     element.appendChild(completeDivElement);
 }
 
-renderList(cardsList, CARDS, "games-section");
+renderList(cardsList, CARDS);
+
+
+// pagination:
+
+const gamesDatasRow = document.querySelector(".games-section");
+const paginationBtns = document.querySelector(".pagination");
+let notesOnPage = 12;                                                               
+
+const pagination = () =>{
+    
+    const amountElementOnPage = Math.ceil(CARDS.length / (notesOnPage));
+
+    let items = [];
+    for(let i = 1; i <= amountElementOnPage; i++){
+        const div = document.createElement("div");
+        div.classList.add("pagination-list");
+        div.classList.add("hidden");
+
+        if(CARDS.length > notesOnPage){
+            div.classList.remove("hidden");
+        }
+
+        const button = document.createElement("button");
+        button.classList.add("pagination-btn");
+        div.appendChild(button);
+        button.innerHTML = i;
+        paginationBtns.appendChild(div);
+        items.push(button);
+    }
+
+    let active;
+    showPage(items[0]);
+
+    for(let item of items){
+        item.addEventListener("click", function(){
+            showPage(this);
+        })
+    }
+
+    function showPage(elem) {
+        if(active){
+            active.classList.remove("active");
+        }
+        
+        active = elem;
+        elem.classList.add("active");
+    
+        let pageNum = +elem.innerHTML;
+        let start = (pageNum - 1) * notesOnPage;
+        let end = start + notesOnPage;
+        let notes = CARDS.slice(start, end);
+    
+        gamesDatasRow.innerHTML = "";
+    
+        renderList(cardsList, notes);      
+    }
+}
+
+pagination();
+
+
 
 //default cards:
 
@@ -60,7 +125,7 @@ const handleBtnReset = () =>{
     resetButton.style.display = "none";
     selectId.value = "default";
 
-    renderList(cardsList, initialCards, "games-section");
+    renderList(cardsList, initialCards.slice(0, notesOnPage));
 }
 
 //sort cards:
@@ -83,7 +148,7 @@ const handleSortCards = (e) =>{
             break;        
         }
 
-        renderList(cardsList, sortedGames, "games-section");
+        renderList(cardsList, sortedGames.slice(0, notesOnPage));
         resetButton.addEventListener("click", handleBtnReset);
     }
 
