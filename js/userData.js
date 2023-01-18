@@ -149,6 +149,7 @@ const disabledRole = () =>{
     const usersBtnDots = document.querySelectorAll(".users-dots");
     for(let elem in usersBtnDots){
         usersBtnDots[elem].setAttribute("disabled", "");
+        renderList(usersDataList, initializedUsers.slice(0, notesOnPage));
     }
 }
 
@@ -213,6 +214,7 @@ const pagination = () =>{
     }
 }
 pagination();
+
 //default users:
 const handleBtnReset = () => {
     resetButton.style.display = "none";
