@@ -57,6 +57,7 @@ const renderList = (element, list) =>{
 
     const completeBodyElement = list.reduce((bodyElement, item) =>{
         bodyElement.appendChild(renderItem(item));
+        bodyElement.classList.add("users-list-rows");
 
         return bodyElement;
     }, bodyElement);
@@ -66,26 +67,6 @@ const renderList = (element, list) =>{
 }
 
 renderList(usersDataList, USERS);
-
-
-const enabledActions = () =>{
-    const usersBtnDots = document.querySelectorAll(".users-dots");
-    for(let elem in usersBtnDots){
-        usersBtnDots[elem].removeAttribute("disabled", "");
-    }
-}
-
-signInFormBtn.addEventListener("click", enabledActions);
-
-const disabledActions = () =>{
-    const usersBtnDots = document.querySelectorAll(".users-dots");
-    for(let elem in usersBtnDots){
-        usersBtnDots[elem].setAttribute("disabled", "");
-        renderList(usersDataList, initializedUsers.slice(0, notesOnPage));
-    }
-}
-
-logOutBtn.addEventListener("click", disabledActions);
 
 
 //dialog Role:
@@ -155,16 +136,34 @@ const dialogRoleShow = () =>{
     } 
 }
 
+const enabledActions = () =>{
+    const usersBtnDots = document.querySelectorAll(".users-dots");
+    for(let elem in usersBtnDots){
+        usersBtnDots[elem].removeAttribute("disabled", "");
+       dialogRoleShow ();
+    } 
+}
+
+signInFormBtn.addEventListener("click", enabledActions);
+
+const disabledActions = () =>{
+    const usersBtnDots = document.querySelectorAll(".users-dots");
+    for(let elem in usersBtnDots){
+        usersBtnDots[elem].setAttribute("disabled", "");
+        renderList(usersDataList, initializedUsers.slice(0, notesOnPage));
+    }
+}
+
+logOutBtn.addEventListener("click", disabledActions);
 
 
 // pagination:
 
-const usersDatasRow = document.querySelector(".users-list-row");
+const usersDatasRows = document.querySelector(".users-list-rows");
 const paginationListBtns = document.querySelector(".pagination");
 let notesOnPage = 5;                                                               
 
 const pagination = () =>{
-    
     const amountElementOnPage = Math.ceil(USERS.length / (notesOnPage));
 
     let items = [];
@@ -185,9 +184,7 @@ const pagination = () =>{
         items.push(button);
     }
 
-    let active;
-    showPage(items[0]);
-
+  
     for(let item of items){
         item.addEventListener("click", function(){
             showPage(this);
@@ -204,16 +201,91 @@ const pagination = () =>{
         elem.classList.add("active");
     
         let pageNum = +elem.innerHTML;
+
         let start = (pageNum - 1) * notesOnPage;
         let end = start + notesOnPage;
+        
         let notes = USERS.slice(start, end);
     
-        usersDatasRow.innerHTML = "";
+        usersDatasRows.innerHTML = "";
+        
+        renderList(usersDataList, notes);     
+    }  
     
-        renderList(usersDataList, notes);      
-    }
+    let active;
+    showPage(items[0]);
+
 }
 pagination();
+
+
+
+
+
+
+// let table = document.querySelector('#table');
+// let pagination = document.querySelector('#pagination');
+
+// let notesOnPage = 3;
+// let countOfItems = Math.ceil(users.length / notesOnPage);
+
+// let showPage = (function() {
+// 	let active;
+	
+// 	return function(item) {
+// 		if (active) {
+// 			active.classList.remove('active');
+// 		}
+// 		active = item;
+		
+// 		item.classList.add('active');
+		
+// 		let pageNum = +item.innerHTML;
+		
+// 		let start = (pageNum - 1) * notesOnPage;
+// 		let end = start + notesOnPage;
+		
+// 		let notes = users.slice(start, end);
+		
+// 		table.innerHTML = '';
+// 		for (let note of notes) {
+// 			let tr = document.createElement('tr');
+// 			table.appendChild(tr);
+			
+// 			createCell(note.name, tr);
+// 			createCell(note.surname, tr);
+// 			createCell(note.age, tr);
+// 		}
+// 	};
+// }());
+
+// let items = [];
+// for (let i = 1; i <= countOfItems; i++) {
+// 	let li = document.createElement('li');
+// 	li.innerHTML = i;
+// 	pagination.appendChild(li);
+// 	items.push(li);
+// }
+
+// showPage(items[0]);
+
+// for (let item of items) {
+// 	item.addEventListener('click', function() {
+// 		showPage(this);
+// 	});
+// }
+
+// function createCell(text, tr) {
+// 	let td = document.createElement('td');
+// 	td.innerHTML = text;
+// 	tr.appendChild(td);
+// }
+
+
+
+
+
+
 
 //default users:
 const handleBtnReset = () => {
@@ -244,7 +316,7 @@ const handleRoleSelect = (e) => {
             sortedUsers = USERS.sort((a) => a.role === "user" ?  -1 : 0);
             break;
     }
-    
+  
     renderList(usersDataList, sortedUsers.slice(0, notesOnPage) );
     
     resetButton.addEventListener("click", handleBtnReset);
@@ -253,9 +325,7 @@ const handleRoleSelect = (e) => {
 }
 usersRoleSelect.addEventListener("change", handleRoleSelect);
 
-
-dialogRoleShow ();
-
+// dialogRoleShow ();
 
 
 // let arrayPage = [...USERS]
