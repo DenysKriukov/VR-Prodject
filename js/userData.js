@@ -68,6 +68,25 @@ const renderList = (element, list) =>{
 renderList(usersDataList, USERS);
 
 
+const enabledActions = () =>{
+    const usersBtnDots = document.querySelectorAll(".users-dots");
+    for(let elem in usersBtnDots){
+        usersBtnDots[elem].removeAttribute("disabled", "");
+    }
+}
+
+signInFormBtn.addEventListener("click", enabledActions);
+
+const disabledActions = () =>{
+    const usersBtnDots = document.querySelectorAll(".users-dots");
+    for(let elem in usersBtnDots){
+        usersBtnDots[elem].setAttribute("disabled", "");
+        renderList(usersDataList, initializedUsers.slice(0, notesOnPage));
+    }
+}
+
+logOutBtn.addEventListener("click", disabledActions);
+
 
 //dialog Role:
 const dialogRoleShow = () =>{
@@ -135,25 +154,6 @@ const dialogRoleShow = () =>{
         })
     } 
 }
-
-const enabledRole = () =>{
-    const usersBtnDots = document.querySelectorAll(".users-dots");
-    for(let elem in usersBtnDots){
-        usersBtnDots[elem].removeAttribute("disabled", "");
-    }
-}
-
-signInFormBtn.addEventListener("click", enabledRole);
-
-const disabledRole = () =>{
-    const usersBtnDots = document.querySelectorAll(".users-dots");
-    for(let elem in usersBtnDots){
-        usersBtnDots[elem].setAttribute("disabled", "");
-        renderList(usersDataList, initializedUsers.slice(0, notesOnPage));
-    }
-}
-
-logOutBtn.addEventListener("click", disabledRole);
 
 
 

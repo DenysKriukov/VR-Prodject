@@ -358,6 +358,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    min-height: 680px;
     justify-content: space-between;
     padding: 0px;
     gap: 28px;
@@ -382,10 +383,11 @@ body {
     width: 290px;
     height: 200px;
     background-position: center;
+    transition: transform 0.5s;
 }
 
 .game-img:hover {
-    transform: translateY(-55px);
+    transform: translateY(-30px);
 }
 .card-wrap-text {
     box-sizing: border-box;
