@@ -86,9 +86,7 @@ const pagination = () =>{
         items.push(button);
     }
 
-    let active;
-    showPage(items[0]);
-
+   
     for(let item of items){
         item.addEventListener("click", function(){
             showPage(this);
@@ -111,7 +109,11 @@ const pagination = () =>{
         gamesDatasRow.innerHTML = "";
     
         renderList(cardsList, notes);      
-    }
+    } 
+    
+    let active;
+    showPage(items[0]);
+
 }
 
 pagination();

@@ -159,7 +159,7 @@ logOutBtn.addEventListener("click", disabledActions);
 
 // pagination:
 
-const usersDatasRows = document.querySelector(".users-list-rows");
+const usersDatasRows = document.querySelector(".users-list-class");
 const paginationListBtns = document.querySelector(".pagination");
 let notesOnPage = 5;                                                               
 
@@ -289,6 +289,7 @@ pagination();
 
 //default users:
 const handleBtnReset = () => {
+    usersDataList.innerHTML = "";
     resetButton.style.display = "none";
     selectId.value = "default";
     
@@ -299,6 +300,7 @@ const handleBtnReset = () => {
 
 //sort:
 const handleRoleSelect = (e) => {
+    usersDataList.innerHTML = "";
     const sortRole = e.target.value;
     let sortedUsers = null;
     
