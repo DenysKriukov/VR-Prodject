@@ -73,7 +73,7 @@ const isUserSignIn = () =>{
 
     if(user){
         localStorage.setItem("user", JSON.stringify(user));
-        elementBody.style.overflow = "";
+        // elementBody.style.overflow = "";
         auth.classList.add("hidden");
         overlay.classList.add("hidden");
         resetInputsField();

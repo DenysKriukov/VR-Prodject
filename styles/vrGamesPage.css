@@ -367,24 +367,40 @@ body {
     
 }
 .game-card {
-    position: relative;
+    /* position: relative; */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    max-width: 100%;
+    width: 100%;
+    max-width: 290px;
     border-radius: 8px;
     box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.178);
     cursor: pointer;
     /* transition: transform 0.2s linear; */
 }
+
+.game-card-item {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        /* flex-direction: column-reverse; */
+        /* align-items: center; */
+        width: 100%;
+        max-width: 290px;
+        height: 200px;
+}
+    
+
 .game-img {
     position: relative;
     max-width: 100%;
     width: 290px;
     height: 200px;
+    /* object-fit: contain; */
     background-position: center;
     transition: transform 0.5s;
 }
+
 
 .game-img:hover {
     transform: translateY(-30px);

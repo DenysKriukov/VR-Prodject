@@ -184,7 +184,9 @@ const pagination = () =>{
         items.push(button);
     }
 
-  
+    let active;
+    showPage(items[0]);
+
     for(let item of items){
         item.addEventListener("click", function(){
             showPage(this);
@@ -212,11 +214,10 @@ const pagination = () =>{
         renderList(usersDataList, notes);     
     }  
     
-    let active;
-    showPage(items[0]);
+   
 
 }
-pagination();
+
 
 
 
@@ -300,7 +301,6 @@ const handleBtnReset = () => {
 
 //sort:
 const handleRoleSelect = (e) => {
-    usersDataList.innerHTML = "";
     const sortRole = e.target.value;
     let sortedUsers = null;
     
@@ -325,9 +325,10 @@ const handleRoleSelect = (e) => {
     dialogRoleShow ();
  
 }
-usersRoleSelect.addEventListener("change", handleRoleSelect);
 
-// dialogRoleShow ();
+usersRoleSelect.addEventListener("change", handleRoleSelect);
+pagination();
+dialogRoleShow ();
 
 
 // let arrayPage = [...USERS]
