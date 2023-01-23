@@ -5,7 +5,7 @@ const addingName = document.getElementById("adding-name");
 const addingDescription = document.getElementById("adding-description");
 const addingReview = document.getElementById("adding-review");
 const addingImage = document.getElementById("adding-image");
-const addingModal = document.querySelector(".newGame");
+const authNewGame = document.querySelector(".newGame");
 const overlayNewGame = document.querySelector(".overlayNewGame");
 const cardsList = document.querySelector(".games-section");
 const CardsDataSelect = document.querySelector(".select-option-game");
@@ -32,12 +32,12 @@ const renderItem = (card) =>{
         alt=${card.name}> 
         <div class="card-wrap-text">
             <div class="card-wrap-text-left">
-                <h4 class="game-name">${card.name}</h4>
-                <p class="game-description">${card.description}</p>
+                <h4 class="game-name">${card.gameName}</h4>
+                <p class="game-description">${card.gameDescription}</p>
             </div> 
             <diw class="card-wrap-text-right">
                 <h4 class="user-name">${authedUser.name}</h4>
-                <p class="user-review">${card.review}</p>
+                <p class="user-review">${card.userReview}</p>
             </diw>
         </div>
     `;
@@ -50,7 +50,7 @@ const renderItem = (card) =>{
 
 
 // render game card list:
-export const renderList = (element, list) => {
+const renderList = (element, list) => {
     const divElement = document.createElement("div");
     divElement.classList.add("game-cards");
     divElement.style.display = "flex";
@@ -61,11 +61,15 @@ export const renderList = (element, list) => {
     const completeDivElement = list.reduce((divElement, item) =>{
         divElement.appendChild(renderItem(item));
 
+
         return divElement;
     }, divElement);
 
     element.appendChild(completeDivElement);
 }
+
+renderList(cardsList, CARDS);
+
 
 // render card dialog:
 const handleClickCard = (card) =>{
@@ -74,8 +78,8 @@ const handleClickCard = (card) =>{
     scrollController.disabledScroll();
   
     document.querySelector(".game-dialog-game-img").src = `../assets/img/games/${card.img}.png`;
-    document.querySelector(".game-dialog-game-name").innerHTML = card.name;
-    document.querySelector(".game-dialog-game-description").innerHTML = card.description;
+    document.querySelector(".game-dialog-game-name").innerHTML = card.gameName;
+    document.querySelector(".game-dialog-game-description").innerHTML = card.gameDescription;
     document.querySelector(".game-dialog-user-name").innerHTML = authedUser.name;
     document.querySelector(".game-dialog-user-review").innerHTML = card.userReview;
 
@@ -190,10 +194,6 @@ const handleAddNewGame = (e) =>{
 }
 addingFormBtn.addEventListener("click", handleAddNewGame);
 
-
-// paginationList.style.display = "flex";
-// contentEmptyGames.style.display = "flex";
-// gamesHeader.style.display = "none";
 
 
 const checkEmptyGames = () =>{
