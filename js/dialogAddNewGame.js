@@ -68,7 +68,7 @@ const renderList = (element, list) => {
     element.appendChild(completeDivElement);
 }
 
-renderList(cardsList, CARDS);
+
 
 
 // render card dialog:
