@@ -5,7 +5,7 @@ export const CARDS =[{
     alt: "wolfenstein creed",
     gameName: "Wolfenstein",
     gameDescription: "Youngblood",
-    user: {
+    authedUser: {
         id: "0",
         userName: "Mary Perry",
         userReview: "Cool game!",
@@ -16,9 +16,9 @@ export const CARDS =[{
     id: "1",
     img: "battlefield",
     alt: "battlefield",
-    gameName: "Battlefield",
+    name: "Battlefield",
     gameDescription: "Battlefield 1942",
-    user: {
+    authedUser: {
         id: "1",
         userName: "Taro Yamada",
         userReview: "Awesome!",
@@ -31,7 +31,7 @@ export const CARDS =[{
     alt: "borderlands",
     gameName: "Borderlands",
     gameDescription: "borderlands",
-    user: {
+    authedUser: {
         id: "2",
         userName: "Jade Bernard",
         userReview: "Great!",
@@ -44,7 +44,7 @@ export const CARDS =[{
     alt: "crysis 3",
     gameName: "Crysis 3",
     gameDescription: "Crysis 3",
-    user: {
+    authedUser: {
         id: "3",
         userName: "Lin Zhu",
         userReview: "Cool!",
@@ -57,7 +57,7 @@ export const CARDS =[{
     alt: "dead space",
     gameName: "Dead Space",
     gameDescription: "Dead Space",
-    user: {
+    authedUser: {
         id: "4",
         userName: "Elena Zelenska",
         userReview: "The great game!",
@@ -70,7 +70,7 @@ export const CARDS =[{
     alt: "dragon age",
     gameName: "Dragon Age",
     gameDescription: "Awakening",
-    user: {
+    authedUser: {
         id: "5",
         userName: "Martha Doych",
         userReview: "Super!",
@@ -83,7 +83,7 @@ export const CARDS =[{
     alt: "far cry",
     gameName: "Far Cry",
     gameDescription: "Primal",
-    user: {
+    authedUser: {
         id: "6",
         userName: "Ivanka Dydek",
         userReview: "Awesome!",
@@ -96,7 +96,7 @@ export const CARDS =[{
     alt: "fifa20",
     gameName: "FIFA 20",
     gameDescription: "FIFA 20",
-    user: {
+    authedUser: {
         id: "1",
         userName: "Taro Yamada",
         userReview: "Cool game!",
@@ -109,7 +109,7 @@ export const CARDS =[{
     alt: "mass effect",
     gameName: "Mass",
     gameDescription: "Effect",
-    user: {
+    authedUser: {
         id: "2",
         userName: "Jade Bernard",
         userReview: "Super!",
@@ -122,7 +122,7 @@ export const CARDS =[{
     alt: "max payne 2",
     gameName: "Max Payne 2",
     gameDescription: "The Fall of Max Payne",
-    user: {
+    authedUser: {
         id: "3",
         userName: "Lin Zhu",
         userReview: "Great!",
@@ -135,7 +135,7 @@ export const CARDS =[{
     alt: "Metro",
     gameName: "Metro",
     gameDescription: "Exodus",
-    user: {
+    authedUser: {
         id: "4",
         userName: "Elena Zelenska",
         userReview: "The great game!",
@@ -148,7 +148,7 @@ export const CARDS =[{
     alt: "WRC 5",
     gameName: "WRC 5",
     gameDescription: "Esports Pack 1",
-    user: {
+    authedUser: {
         id: "0",
         userName: "Mary Perry",
         userReview: "Cool game!",
@@ -161,7 +161,7 @@ export const CARDS =[{
     alt: "assassins creed",
     gameName: "Assassins Creed",
     gameDescription: "Assassins Creed",
-    user: {
+    authedUser: {
         id: "4",
         userName: "Elena Zelenska",
         userReview: "The great game!",
@@ -174,7 +174,7 @@ export const CARDS =[{
     alt: "rage",
     gameName: "RAGE",
     gameDescription: "RAGE",
-    user: {
+    authedUser: {
         id: "0",
         userName: "Mary Perry",
         userReview: "Cool game!",

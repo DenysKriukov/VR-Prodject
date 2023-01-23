@@ -4,7 +4,7 @@ const background = document.querySelector(".backdrop");
 // const authedHeaderMenuArrow = document.querySelector(".authed-header-arrow");
 
 const dialogAuthedNavHeader = () =>{  
-    authedHeaderNavBtn.style.width = "36px"
+    authedHeaderNavBtn.style.width = "50px"
     // authedHeaderNavBtn.style.marginLeft = "-40px"
     authedHeaderNavMenuWrap.style.zIndex = "100";
     // authedHeaderNavMenuArrow.style.zIndex = "200";

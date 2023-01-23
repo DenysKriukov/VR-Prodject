@@ -25,19 +25,20 @@ const authedUser = JSON.parse(localStorage.getItem('user')) || {name:"player nam
 const renderItem = (card) =>{
     const liElement = document.createElement("li");
     liElement.classList.add("game-card-item");
+    liElement.setAttribute("id", card.id);
 
     liElement.innerHTML = `
         <img class="game-img" 
         src="../assets/img/games/${card.img}.png" 
-        alt=${card.name}> 
+        alt=${card.alt}> 
         <div class="card-wrap-text">
             <div class="card-wrap-text-left">
-                <h4 class="game-name">${card.gameName}</h4>
-                <p class="game-description">${card.gameDescription}</p>
+                <h4 class="game-name">${card.name}</h4>
+                <p class="game-description">${card.description}</p>
             </div> 
             <diw class="card-wrap-text-right">
                 <h4 class="user-name">${authedUser.name}</h4>
-                <p class="user-review">${card.userReview}</p>
+                <p class="user-review">${card.review}</p>
             </diw>
         </div>
     `;
@@ -52,7 +53,7 @@ const renderItem = (card) =>{
 // render game card list:
 const renderList = (element, list) => {
     const divElement = document.createElement("div");
-    divElement.classList.add("game-cards");
+    divElement.classList.add("content-div-item");
     divElement.style.display = "flex";
     divElement.style.justifyContent = "center";
     divElement.style.flexWrap = "wrap";
@@ -78,10 +79,10 @@ const handleClickCard = (card) =>{
     scrollController.disabledScroll();
   
     document.querySelector(".game-dialog-game-img").src = `../assets/img/games/${card.img}.png`;
-    document.querySelector(".game-dialog-game-name").innerHTML = card.gameName;
-    document.querySelector(".game-dialog-game-description").innerHTML = card.gameDescription;
+    document.querySelector(".game-dialog-game-name").innerHTML = card.name;
+    document.querySelector(".game-dialog-game-description").innerHTML = card.description;
     document.querySelector(".game-dialog-user-name").innerHTML = authedUser.name;
-    document.querySelector(".game-dialog-user-review").innerHTML = card.userReview;
+    document.querySelector(".game-dialog-user-review").innerHTML = card.review;
 
 }
 
