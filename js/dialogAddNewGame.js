@@ -248,8 +248,20 @@ const handleSortCards = (e) =>{
 
 CardsDataSelect.addEventListener("change", handleSortCards);
 
+function displayAuthedGames () {
+    if(cards.length === 0){
+        cards.push(CARDS);
+        localStorage.setItem("cards", JSON.stringify(cards));
+    }
+}
+
+window.addEventListener('load', function() {
+    displayAuthedGames();
+});
+
 
 window.addEventListener("DOMContentLoaded", () =>{
+    displayAuthedGames ()
     checkEmptyGames();
     pagination();
 });
