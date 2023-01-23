@@ -1,3 +1,4 @@
+import { CARDS } from "../mocks/cards.js"
 
 const addingFormBtn = document.querySelector(".modal-Add");
 const addingName = document.getElementById("adding-name");
@@ -24,7 +25,6 @@ const authedUser = JSON.parse(localStorage.getItem('user')) || {name:"player nam
 const renderItem = (card) =>{
     const liElement = document.createElement("li");
     liElement.classList.add("game-card-item");
-    // liElement.setAttribute("id", card.id);
 
     liElement.innerHTML = `
         <img class="game-img" 

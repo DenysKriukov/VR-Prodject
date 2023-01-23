@@ -78,6 +78,7 @@ const isUserSignIn = () =>{
         overlay.classList.add("hidden");
         resetInputsField();
         changeHeader();
+        // enabledscroll ();
     }else{
         alert("invalid email or password");
         checkInputPassword();
