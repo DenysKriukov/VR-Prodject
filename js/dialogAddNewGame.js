@@ -6,7 +6,7 @@ const addingDescription = document.getElementById("adding-description");
 const addingReview = document.getElementById("adding-review");
 const addingImage = document.getElementById("adding-image");
 const addingModal = document.querySelector(".newGame");
-const overlay = document.querySelector(".overlayNewGame");
+const overlayNewGame = document.querySelector(".overlayNewGame");
 const cardsList = document.querySelector(".games-section");
 const CardsDataSelect = document.querySelector(".select-option-game");
 const resetButton = document.querySelector(".reset-button");
@@ -89,7 +89,8 @@ const resetInputsField = () =>{
 }
 
 const closeGameDialog = () =>{
-    addingModal.classList.remove(".open");
+    overlayNewGame.classList.remove('open');
+    authNewGame.classList.remove('open');
     gameDialog.classList.add("hidden");
     overlayGameDialog.classList.add("hidden");
     scrollController.enabledScroll();
